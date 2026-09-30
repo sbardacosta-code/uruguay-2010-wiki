@@ -8,6 +8,22 @@ Celeste is an English-language personal wiki about Uruguay’s route to fourth p
 
 [Decisions and a command-by-command walkthrough](DECISIONS_AND_WALKTHROUGH.md) explain who chose each option and why.
 
+## Visual dashboard
+
+**Celeste now has a local browser interface:** an interactive seven-match journey, reviewed notes, a searchable reading room, and Ask / Chat / Search with expandable original-source evidence.
+
+With Ollama running, double-click **Open Celeste.command** on macOS, or run:
+
+```sh
+python3 dashboard.py --open
+```
+
+Open **http://127.0.0.1:8000**. Keep the launcher terminal open. Everything the interface loads is local: no CDNs, external fonts, or cloud inference. The model-status badge reports local availability, not verified network disconnection. The existing CLI remains available and is still used for the required offline demonstration.
+
+![The Celeste dashboard](evidence/dashboard/01-dashboard.png)
+
+[Launch instructions and design](web/README.md) · [Actual browser checks and evidence](evidence/dashboard/README.md)
+
 ## Start here: rubric and evidence
 
 This table maps the assignment’s three grading categories to the submitted artifacts. Status labels describe observed work; they are not predicted scores.

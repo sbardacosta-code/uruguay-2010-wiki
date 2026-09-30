@@ -38,3 +38,7 @@ The script creates the network observations and transcript. Individual CLI evide
 - The notes, source references, and evidence files remain readable and traceable.
 
 Do not change this status to complete merely because the script exited. Review the actual outputs, preserve failed attempts, and rerun after any necessary fix. Individual cards say “network disconnection not verified by this record”; the run-level capture provides the additional evidence. Do not rewrite the original model responses to make them pass.
+
+## Optional visual dashboard capture
+
+The new dashboard supplements the required CLI run. While still disconnected, start `python3 dashboard.py --open`, browse a match and its original source, then try Search, Ask, and a Chat follow-up. Record those actual interactions. The badge “Gemma is ready” checks model availability only; it is not an offline attestation. Published-source/license links need internet, while the local originals remain readable without it.

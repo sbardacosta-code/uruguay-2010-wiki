@@ -1,6 +1,6 @@
 # Project decisions and walkthrough
 
-This guide explains the choices behind the Uruguay 2010 wiki and traces a real question through the application. The user chose the subject, English-language output, and publication of the repository. The assistant proposed and implemented the technical choices below. The user should review this explanation and practice the commands before presenting the project; a written explanation does not establish the user's understanding.
+This guide explains the choices behind the Uruguay 2010 wiki and traces a real question through the application. The user chose the subject, English-language output, publication of the repository, and option 1: an interactive football dashboard. The assistant proposed and implemented the technical choices below. The user should review this explanation and practice the commands before presenting the project; a written explanation does not establish the user's understanding.
 
 ## The three required choices
 
@@ -27,6 +27,7 @@ The model comparison is an observed development trial, not a controlled benchmar
 | Model instructions | Separate files for research, persona, and ingestion. Research requires evidence; chat supports suggestions and explicitly labeled fiction |
 | Re-ingestion | Fingerprints detect unchanged source text, ingestion prompts, and configuration. A tracked baseline manifest preserves reviewed notes in fresh clones; `.local/` stores subsequent machine-specific state. `--force` backs up and regenerates a note |
 | Reproducibility | Temperature 0 and seed 42 reduce variability; they do not guarantee identical results across runtime versions or machines |
+| Visual interface | The user selected the Celeste football dashboard. The assistant implemented it with standard-library Python, plain JavaScript/CSS, system fonts, and an original SVG illustration to avoid new installation or internet dependencies. It wraps the existing harness and keeps the required CLI |
 | Publication | Source attribution, code, notes, and evidence are public. Model weights, private cache files, and personal Obsidian workspace settings are excluded |
 
 ## Trace the Ghana question through the code

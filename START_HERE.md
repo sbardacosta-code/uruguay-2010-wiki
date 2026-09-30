@@ -15,6 +15,12 @@ cd "$HOME/Documents/ChatGPT/Class 4/uruguay-2010"
 
 Leave this terminal open. If it says the port is already in use, Ollama may already be running; check `./wiki status` in another terminal. The server binds to localhost and disables Ollama cloud access.
 
+## Open the visual dashboard
+
+Keep Ollama running. Double-click `Open Celeste.command` inside the project folder, or run `python3 dashboard.py --open` in a second terminal. The dashboard opens at **http://127.0.0.1:8000**. Explore Home, Journey, Library, and Celeste. Keep the launcher terminal open while using it.
+
+The interface uses the same local sources, model, and evidence-saving code as the CLI. See [the dashboard guide](web/README.md). The terminal commands below remain part of the assignment's required demonstration.
+
 ## Try the commands
 
 Open a second terminal in the project folder:

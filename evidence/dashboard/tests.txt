@@ -1,0 +1,33 @@
+test_ask_ignores_chat_history (test_dashboard.DashboardTests) ... ok
+test_bad_input_does_not_call_model (test_dashboard.DashboardTests) ... 127.0.0.1 - - [30/Sep/2026 09:46:24] "POST /api/query HTTP/1.1" 415 -
+127.0.0.1 - - [30/Sep/2026 09:46:24] "POST /api/query HTTP/1.1" 400 -
+ok
+test_dashboard_loads_seven_matches_and_thirteen_notes (test_dashboard.DashboardTests) ... 127.0.0.1 - - [30/Sep/2026 09:46:24] "GET /api/bootstrap HTTP/1.1" 200 -
+ok
+test_model_busy_releases_no_other_requests_lock (test_dashboard.DashboardTests) ... ok
+test_only_cataloged_sources_are_readable (test_dashboard.DashboardTests) ... 127.0.0.1 - - [30/Sep/2026 09:46:24] "GET /api/source/S02 HTTP/1.1" 200 -
+127.0.0.1 - - [30/Sep/2026 09:46:24] "GET /config.json HTTP/1.1" 404 -
+127.0.0.1 - - [30/Sep/2026 09:46:24] "GET /.git/config HTTP/1.1" 404 -
+127.0.0.1 - - [30/Sep/2026 09:46:24] "GET /api/source/../../config.json HTTP/1.1" 404 -
+127.0.0.1 - - [30/Sep/2026 09:46:24] "GET /api/evidence/../../../config HTTP/1.1" 404 -
+ok
+test_rejects_cross_origin_and_untrusted_host (test_dashboard.DashboardTests) ... 127.0.0.1 - - [30/Sep/2026 09:46:24] "POST /api/query HTTP/1.1" 403 -
+127.0.0.1 - - [30/Sep/2026 09:46:24] "GET /api/bootstrap HTTP/1.1" 403 -
+ok
+test_search_does_not_call_model_and_saves_evidence (test_dashboard.DashboardTests) ... ok
+test_ask_never_reads_chat_history (test_harness.HarnessTests) ... ok
+test_bad_citation_and_invented_quote_rejected (test_harness.HarnessTests) ... ok
+test_chunks_are_exact_source_substrings (test_harness.HarnessTests) ... ok
+test_cloud_endpoint_rejected (test_harness.HarnessTests) ... ok
+test_fiction_stays_out_of_research_mode (test_harness.HarnessTests) ... ok
+test_group_question_retrieves_all_three_matches (test_harness.HarnessTests) ... ok
+test_mode_routing (test_harness.HarnessTests) ... ok
+test_search_needs_no_model (test_harness.HarnessTests) ... ok
+test_stage_expansion_does_not_supply_opponents (test_harness.HarnessTests) ... ok
+test_supported_reference_validates (test_harness.HarnessTests) ... ok
+test_test_answers_never_enter_index (test_harness.HarnessTests) ... ok
+
+----------------------------------------------------------------------
+Ran 18 tests in 0.584s
+
+OK

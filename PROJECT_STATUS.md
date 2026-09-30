@@ -16,10 +16,10 @@ This audit distinguishes implemented work, observed tests, and user actions. The
 | 10 | Define expectations before evaluation | [Original four questions](evaluation/questions.json) retained outside the searchable corpus. [Two additional questions](evaluation/additional-questions.json) extend coverage |
 | 11 | Check retrieval and answer support separately | Actual passages, answers, checked quotations, and assistant source reviews saved. Failures remain visible. Quotation validity alone is not treated as proof of factual correctness |
 | 12 | Test capabilities, follow-up, search, and isolation | Local checks repeated after chat changes. Labeled fiction is now accepted in the observed check; the factual ask still abstains on the fictional password |
-| 13 | Own CLI and saved results | Custom Python CLI/harness, local model client, source index, explicit prompts, errors, and evidence cards. Eleven unit tests pass. [Fresh-clone check](evidence/clean-clone.json) uses no copied project cache and preserves all 13 reviewed notes |
+| 13 | Own CLI and saved results | Custom Python CLI/harness, local model client, source index, explicit prompts, errors, and evidence cards. The original eleven harness tests plus seven dashboard integration tests pass. [Fresh-clone check](evidence/clean-clone.json) uses no copied project cache and preserves all 13 reviewed notes |
 | 14 | Disconnected ingestion and all mode checks | **Not done.** [Capture script and instructions](evidence/offline/README.md) ready. Each attempt preserves commands, transcript, before/after network observations, and linked cards |
 | 15 | README, public repository, and submission | README links the rubric, code, sources, notes, tests, measurements, failures, and remaining offline work. Public access is checked. Course-portal submission is **unconfirmed** |
-| 16 | Optional features | Hosted inference, a website, fine-tuning, and larger models intentionally omitted; none is required |
+| 16 | Optional features | User-selected visual dashboard implemented and locally tested; [guide and evidence](web/README.md). Hosted inference, fine-tuning, and larger models omitted. Dashboard disconnection check remains pending |
 
 ## Remaining user actions
 
