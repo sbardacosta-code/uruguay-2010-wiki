@@ -434,5 +434,7 @@
   "record_id": "20260930T060212-ask-e0d205",
   "created_at": "2026-09-30T06:02:12.720045+00:00",
   "execution": "local",
-  "network_disconnection": "not verified by this record"
+  "network_disconnection": "not verified by this record",
+  "assessment": "Assistant source review: Supported by S02, Uruguay vs Ghana. The opening narrative establishes 1–1 after 120 minutes and a 4–2 shootout. The shootout narrative identifies Muslera’s saves from Mensah and Adiyiah and Abreu’s decisive Panenka-style kick. The final answer distinguishes match goals from shootout kicks. An initial invalid quotation was rejected and repaired; both attempts remain in the JSON trace.",
+  "review_scope": "Local connected run; offline execution remains unverified."
 }

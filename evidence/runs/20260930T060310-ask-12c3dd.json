@@ -232,5 +232,7 @@
     "retrieval_count": 6,
     "chunk_words": 240,
     "overlap_words": 45
-  }
+  },
+  "assessment": "Assistant source review: Appropriate abstention. The retrieved context concerns match events and contains no breakfast information. The actual response explicitly reports insufficient evidence and does not invent a meal. This assessment concerns the supplied corpus; it does not claim that the information cannot exist elsewhere.",
+  "review_scope": "Local connected run; offline execution remains unverified."
 }

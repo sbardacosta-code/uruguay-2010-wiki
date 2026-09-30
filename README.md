@@ -4,11 +4,76 @@ Celeste is an English-language personal wiki about Uruguay’s route to fourth p
 
 **Submission status:** Local CLI, sources, reviewed wiki notes, model tests, and Obsidian screenshots are included. The disconnected offline demonstration is still pending. Later updates will use this same repository URL.
 
+## Start here: rubric and evidence
+
+This table maps the assignment’s three grading categories to the submitted artifacts. Status labels describe observed work; they are not predicted scores.
+
+| Rubric category | What to inspect | Current status |
+|---|---|---|
+| Deliverable quality — 4 points | [CLI and harness](wiki.py), [retrieval](retrieval.py), [local model client](local_model.py), [separate prompts](prompts/), [wiki index](vault/index.md), [topic folders](vault/wiki/), [sources and attribution](research/Sources%20and%20Licenses.md), setup below | Implemented; 13 notes reviewed against sources; screenshots below |
+| Testing and evaluation — 3 points | Four evidence cards below, [predefined expectations](evaluation/questions.json), [chat checks](evidence/evaluation-20260930T055946/chat-transcript.txt), [search output](evidence/search-with-model-unloaded.json), [chat/ask separation](evidence/evaluation-20260930T055946/chat-isolation-ask.txt), [failures and fixes](evidence/Validation.md) | Connected local tests reviewed; disconnected repetition pending |
+| Working result — 3 points | [Actual Gemma ingestion](evidence/runs/20260930T060256-ingest-summary-53e3dd.md), [unchanged re-ingestion](evidence/idempotent-ingestion.json), [runtime identity](evidence/model-identity.json), [offline demonstration page](evidence/offline/README.md) | Local operation demonstrated; mandatory offline proof pending |
+
+### Four research questions: actual answers and source review
+
+Each readable card includes the actual question, answer, retrieved original passages and paths, exact model digest, measured call data, and an assessment of whether the source supports the material claims. Full machine-readable traces sit alongside the cards. These are **local connected runs**, not offline evidence.
+
+| Test | Question | Answer, passages, and assessment |
+|---|---|---|
+| ask-01 | What were Uruguay’s results in the group stage of the 2010 World Cup, and how many points did they finish with? | [Readable evidence card](evidence/runs/20260930T060024-ask-e61788.md) |
+| ask-02 | How was Uruguay’s match against Ghana decided, and what did Muslera and Abreu do? | [Readable evidence card](evidence/runs/20260930T060212-ask-e0d205.md) |
+| ask-03 | Who did Uruguay play after the quarter-finals, and where did they finish? | [Readable evidence card](evidence/runs/20260930T060436-ask-556a03.md) |
+| ask-04 | What did Diego Forlán eat for breakfast on the day Uruguay played Ghana in the 2010 World Cup? | [Readable evidence card](evidence/runs/20260930T060310-ask-12c3dd.md) |
+
+### Wiki in Obsidian
+
+The screenshots show the actual vault, not mockups. Graph filter: `path:wiki/`; attachments hidden. The vault uses Obsidian wikilinks; for GitHub browsing, use the direct Markdown links in the trace below or open the [topic folders](vault/wiki/).
+
+<details>
+<summary>Open note, source references, and related links</summary>
+
+![Reviewed Ghana note with original-source and related-note links](evidence/obsidian/02-note-sources.png)
+
+</details>
+
+<details>
+<summary>Topic list and index</summary>
+
+![Obsidian topic folders and wiki index](evidence/obsidian/01-index.png)
+
+</details>
+
+<details>
+<summary>Graph of the linked topic notes</summary>
+
+![Obsidian graph filtered to curated wiki notes](evidence/obsidian/03-graph.png)
+
+</details>
+
+**Trace a note to its evidence:** open [Uruguay and Ghana](vault/wiki/Matches/Uruguay%20and%20Ghana.md), follow its related note [Uruguay and Netherlands](vault/wiki/Matches/Uruguay%20and%20Netherlands.md), then inspect the original [Knockout Stage Matches](vault/raw/Knockout%20Stage%20Matches.txt) under “Uruguay vs Netherlands.” The original says the Netherlands won 3–2; the note reports the same result. [Source S02 in the catalog](research/sources.json) supplies the downloaded snapshot, revision URL, contributor history, license, and hashes. [Re-ingestion evidence](evidence/idempotent-ingestion.json) shows that all 13 reviewed notes remained unchanged.
+
+### Device, model, and measured performance
+
+| Item | Recorded value |
+|---|---|
+| Device | Apple M4; 16 GB unified memory; macOS 26.6.2 |
+| Model | `gemma4:e4b-it-q4_K_M`; GGUF; Q4_K_M; Ollama 0.35.0 |
+| Observed wall-clock call time | Median 18.09 seconds; range 3.71–68.77 seconds across 35 E4B calls |
+| Sampled peak Ollama process RSS | 4.63 GiB; not total unified-memory/GPU use |
+
+[Raw measurements](evidence/measurements.json), [device record](evidence/device.json), and [measurement limitations](evidence/Validation.md) are included. Some requests queued behind ingestion; these are workflow timings, not an isolated speed benchmark.
+
+### Offline demonstration — pending
+
+The required location is **[evidence/offline/](evidence/offline/README.md)**. That page explains the capture procedure and acceptance checks. No disconnected-run results have been supplied yet. It will link the actual network observations, terminal transcript, screenshots or recording, and reviewed offline evidence cards once the demonstration has been completed.
+
 ## Setup
 
 Tested on macOS 26.6.2, Apple M4 (10 CPU cores, 10 GPU cores), 16 GB unified memory, Python 3.9.6, and Ollama 0.35.0. The CLI uses only the Python standard library and SQLite FTS5. Research refresh scripts additionally require `lxml`; they are not needed to run the supplied wiki.
 
 ```sh
+git clone https://github.com/sbardacosta-code/uruguay-2010-wiki.git
+cd uruguay-2010
 brew install ollama
 brew install --cask obsidian
 ./scripts/start_ollama.sh
