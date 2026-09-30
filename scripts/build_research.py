@@ -187,7 +187,7 @@ This dossier adapts information from the Wikipedia and Wikinews pages linked abo
 '''
 (R/'Uruguay 2010 Research Dossier.md').write_text(d)
 # Source catalog.
-c='# Sources and Licenses\n\nSeven original English articles form the downloaded research corpus. English filenames and documentation are used throughout. Proper names retain their original spelling. Full HTML snapshots are preserved in `research/originals/`; extracted article text is in `vault/raw/`.\n\n'
+c='# Sources and Licenses\n\nSeven original English articles form the downloaded research corpus. English filenames and documentation are used throughout. Proper names retain their original spelling. Full HTML snapshots are preserved in `vault/raw/originals/`; extracted article text is in `vault/raw/`.\n\n'
 for s in CAT['sources']:
  c+=f"## {s['id']} {s['title']}\n\nAuthor attribution: {s['authors']}. Language: English.\n\n[Article]({s['url']}) · [Consulted revision]({s['permanent_url']}) · [History and contributors]({s['history_url']}).\n\nLocal text: `{s['text_path']}`. Original download: `{s['original_html']}`. Extracted words: {s['word_count']:,}.\n\nLicense links supplied by the page: "+', '.join(f'[Creative Commons]({u})' for u in s['license_urls'])+'.\n\n'
 c+='''## Reuse and transformations
@@ -307,7 +307,7 @@ This English-language research package covers Uruguay’s route to fourth place 
 
 ## What is complete
 
-Research and source collection are complete for this stage. Full HTML downloads are preserved in `research/originals/`, with source URLs, revision links, licenses, download timestamps, and SHA-256 hashes in `research/sources.json`. Plain-text source extractions are in `vault/raw/`. The dossier and data tables are derived research materials, not independent primary sources.
+Research and source collection are complete for this stage. Full HTML downloads are preserved in `vault/raw/originals/`, with source URLs, revision links, licenses, download timestamps, and SHA-256 hashes in `research/sources.json`. Plain-text source extractions are in `vault/raw/`. The dossier and data tables are derived research materials, not independent primary sources.
 
 ## What comes next
 

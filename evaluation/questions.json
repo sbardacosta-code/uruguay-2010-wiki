@@ -16,7 +16,7 @@
     "expected_source_paths": [
       "vault/raw/Group A Matches.txt"
     ],
-    "actual_evidence_path": "evidence/runs/20260930T060024-ask-e61788.json"
+    "actual_evidence_path": "evidence/runs/20260930T070050-ask-fde496.json"
   },
   {
     "id": "ask-02",
@@ -32,7 +32,7 @@
     "expected_source_paths": [
       "vault/raw/Knockout Stage Matches.txt"
     ],
-    "actual_evidence_path": "evidence/runs/20260930T060212-ask-e0d205.json"
+    "actual_evidence_path": "evidence/runs/20260930T070221-ask-b1ccba.json"
   },
   {
     "id": "ask-03",
@@ -52,7 +52,7 @@
       "vault/raw/Knockout Stage Matches.txt",
       "vault/raw/World Cup Overview.txt"
     ],
-    "actual_evidence_path": "evidence/runs/20260930T060436-ask-556a03.json"
+    "actual_evidence_path": "evidence/runs/20260930T070312-ask-8c9775.json"
   },
   {
     "id": "ask-04",
@@ -62,6 +62,6 @@
     "source_sections": [],
     "status": "Executed locally; reviewed result in evidence/reviewed-results.json; offline run still pending",
     "expected_source_paths": [],
-    "actual_evidence_path": "evidence/runs/20260930T060310-ask-12c3dd.json"
+    "actual_evidence_path": "evidence/runs/20260930T070334-ask-ce3224.json"
   }
 ]

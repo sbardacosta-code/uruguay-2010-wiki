@@ -1,0 +1,4 @@
+[
+  {"id":"extra-01","question":"Who was the coach listed for Uruguay's 2010 World Cup squad?","expected_answer":"Óscar Tabárez","expected_source":"S03, Uruguay squad","purpose":"Check a coach question without inserting the coach's name into search terms."},
+  {"id":"extra-02","question":"Who scored Uruguay's goals against South Korea, and in which minutes?","expected_answer":"Luis Suárez scored in the 8th and 80th minutes.","expected_source":"S02, Uruguay vs South Korea","purpose":"Check a match outside the original four-question test set."}
+]

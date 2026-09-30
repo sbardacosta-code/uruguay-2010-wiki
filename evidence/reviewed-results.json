@@ -3,28 +3,32 @@
     "test_id": "ask-01",
     "question": "What were Uruguay’s results in the group stage of the 2010 World Cup, and how many points did they finish with?",
     "assessment": "PASS in assistant review",
-    "actual_answer": "Uruguay finished with 7 points in Group A. [S01-2e588f5b5f]\n\nUruguay drew 0–0 against France on June 11, 2010. [S01-54d47d76aa]\n\nUruguay defeated South Africa 3–0 on June 16, 2010. [S01-eca4bd93d3]\n\nUruguay defeated Mexico 1–0 on June 22, 2010. [S01-f6f9b0f76a]",
-    "evidence_path": "evidence/runs/20260930T060024-ask-e61788.json"
+    "actual_answer": "Uruguay finished with 7 points in the Group A standings. [S01-2e588f5b5f]\n\nUruguay drew 0–0 against France on June 11, 2010. [S01-54d47d76aa]\n\nUruguay defeated South Africa 3–0 on June 16, 2010. [S01-eca4bd93d3]\n\nUruguay defeated Mexico 1–0 on June 22, 2010. [S01-f6f9b0f76a]",
+    "evidence_path": "evidence/runs/20260930T070050-ask-fde496.json",
+    "review_notes": "Retrieval PASS: standings and all three match passages found. Answer PASS: seven points and all scores agree with S01; dates are present in the cited full passages although the short quoted score rows omit dates."
   },
   {
     "test_id": "ask-02",
     "question": "How was Uruguay’s match against Ghana decided, and what did Muslera and Abreu do?",
     "assessment": "PASS in assistant review",
-    "actual_answer": "Uruguay won the match against Ghana in a penalty shoot-out 4–2 after the game finished 1–1 after 120 minutes of play. [S02-4ae80b7615] [S02-30bc6edb29]\n\nFernando Muslera saved captain John Mensah's penalty during the shoot-out, and he also saved Adiyiah's penalty. [S02-dcf6289ee5]\n\nSebastián Abreu converted Uruguay's fifth spot kick by lightly chipping it Panenka-style to win the match. [S02-dcf6289ee5]",
-    "evidence_path": "evidence/runs/20260930T060212-ask-e0d205.json"
+    "actual_answer": "Uruguay won the match against Ghana in a penalty shoot-out with a score of 4–2 after the game finished 1–1 after 120 minutes of play. [S02-4ae80b7615] [S02-30bc6edb29]\n\nFernando Muslera saved captain John Mensah's penalty during the shoot-out, and he also saved Adiyiah's penalty. [S02-dcf6289ee5]\n\nSebastián Abreu converted Uruguay's fifth spot kick by lightly chipping it Panenka-style to win the match. [S02-dcf6289ee5]",
+    "evidence_path": "evidence/runs/20260930T070221-ask-b1ccba.json",
+    "review_notes": "Retrieval PASS: match outcome and shootout narrative found. Answer PASS: 1–1 after 120 minutes, 4–2 shootout, both Muslera saves, and Abreu chip agree with S02."
   },
   {
     "test_id": "ask-03",
     "question": "Who did Uruguay play after the quarter-finals, and where did they finish?",
     "assessment": "PASS in assistant review",
-    "actual_answer": "Uruguay played the Netherlands in the first semi-final, which ended 2–3 in favor of the Netherlands. [S02-0e476c8e59] [S02-c754bbeb32]\n\nUruguay played Germany in the match for third place, which ended 2–3 in favor of Germany. [S02-ba8c11a4d5] [S02-cc733261bb]\n\nUruguay finished in fourth place in the final standings. [S06-3ebffb8582]",
-    "evidence_path": "evidence/runs/20260930T060436-ask-556a03.json"
+    "actual_answer": "Uruguay played the Netherlands in the first semi-final, which the Netherlands won 3–2. [S02-0e476c8e59] [S02-c754bbeb32]\n\nIn the match for third place, Germany defeated Uruguay 3–2 to claim third place. [S02-ba8c11a4d5]\n\nUruguay finished in fourth place in the final standings. [S06-3ebffb8582]",
+    "evidence_path": "evidence/runs/20260930T070312-ask-8c9775.json",
+    "review_notes": "Retrieval PASS: semi-final, third-place game, and final table found. Answer PASS: Netherlands and Germany won 3–2; S06 explicitly places Uruguay fourth."
   },
   {
     "test_id": "ask-04",
     "question": "What did Diego Forlán eat for breakfast on the day Uruguay played Ghana in the 2010 World Cup?",
     "assessment": "PASS in assistant review",
-    "actual_answer": "Insufficient evidence. The provided passages detail the match between Uruguay and Ghana, including goals and penalties, but they do not contain any information about what Diego Forlán ate for breakfast on that day.",
-    "evidence_path": "evidence/runs/20260930T060310-ask-12c3dd.json"
+    "actual_answer": "Insufficient evidence. The provided passages detail the match between Uruguay and Ghana, including goals and events, but they do not contain any information about what Diego Forlán ate for breakfast on that day.",
+    "evidence_path": "evidence/runs/20260930T070334-ask-ce3224.json",
+    "review_notes": "Retrieval: related Ghana passages exist but contain no breakfast evidence. Answer PASS: abstains without a fabricated meal; this is an unsupported-question check, not a claim of exhaustive knowledge."
   }
 ]

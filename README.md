@@ -4,6 +4,10 @@ Celeste is an English-language personal wiki about Uruguay’s route to fourth p
 
 **Submission status:** Local CLI, sources, reviewed wiki notes, model tests, and Obsidian screenshots are included. The disconnected offline demonstration is still pending. Later updates will use this same repository URL.
 
+[Step-by-step completion status](PROJECT_STATUS.md) tracks every requirement and remaining user action.
+
+[Decisions and a command-by-command walkthrough](DECISIONS_AND_WALKTHROUGH.md) explain who chose each option and why.
+
 ## Start here: rubric and evidence
 
 This table maps the assignment’s three grading categories to the submitted artifacts. Status labels describe observed work; they are not predicted scores.
@@ -11,7 +15,7 @@ This table maps the assignment’s three grading categories to the submitted art
 | Rubric category | What to inspect | Current status |
 |---|---|---|
 | Deliverable quality — 4 points | [CLI and harness](wiki.py), [retrieval](retrieval.py), [local model client](local_model.py), [separate prompts](prompts/), [wiki index](vault/index.md), [topic folders](vault/wiki/), [sources and attribution](research/Sources%20and%20Licenses.md), setup below | Implemented; 13 notes reviewed against sources; screenshots below |
-| Testing and evaluation — 3 points | Four evidence cards below, [predefined expectations](evaluation/questions.json), [chat checks](evidence/evaluation-20260930T055946/chat-transcript.txt), [search output](evidence/search-with-model-unloaded.json), [chat/ask separation](evidence/evaluation-20260930T055946/chat-isolation-ask.txt), [failures and fixes](evidence/Validation.md) | Connected local tests reviewed; disconnected repetition pending |
+| Testing and evaluation — 3 points | Four evidence cards below, [predefined expectations](evaluation/questions.json), [chat checks](evidence/evaluation-20260930T064858/chat-transcript.txt), [search output](evidence/search-with-model-unloaded.json), [chat/ask separation](evidence/evaluation-20260930T064858/chat-isolation-ask.txt), [failures and fixes](evidence/Validation.md) | Connected local tests reviewed; disconnected repetition pending |
 | Working result — 3 points | [Actual Gemma ingestion](evidence/runs/20260930T060256-ingest-summary-53e3dd.md), [unchanged re-ingestion](evidence/idempotent-ingestion.json), [runtime identity](evidence/model-identity.json), [offline demonstration page](evidence/offline/README.md) | Local operation demonstrated; mandatory offline proof pending |
 
 ### Four research questions: actual answers and source review
@@ -20,10 +24,10 @@ Each readable card includes the actual question, answer, retrieved original pass
 
 | Test | Question | Answer, passages, and assessment |
 |---|---|---|
-| ask-01 | What were Uruguay’s results in the group stage of the 2010 World Cup, and how many points did they finish with? | [Readable evidence card](evidence/runs/20260930T060024-ask-e61788.md) |
-| ask-02 | How was Uruguay’s match against Ghana decided, and what did Muslera and Abreu do? | [Readable evidence card](evidence/runs/20260930T060212-ask-e0d205.md) |
-| ask-03 | Who did Uruguay play after the quarter-finals, and where did they finish? | [Readable evidence card](evidence/runs/20260930T060436-ask-556a03.md) |
-| ask-04 | What did Diego Forlán eat for breakfast on the day Uruguay played Ghana in the 2010 World Cup? | [Readable evidence card](evidence/runs/20260930T060310-ask-12c3dd.md) |
+| ask-01 | What were Uruguay’s results in the group stage of the 2010 World Cup, and how many points did they finish with? | [Readable evidence card](evidence/runs/20260930T070050-ask-fde496.md) |
+| ask-02 | How was Uruguay’s match against Ghana decided, and what did Muslera and Abreu do? | [Readable evidence card](evidence/runs/20260930T070221-ask-b1ccba.md) |
+| ask-03 | Who did Uruguay play after the quarter-finals, and where did they finish? | [Readable evidence card](evidence/runs/20260930T070312-ask-8c9775.md) |
+| ask-04 | What did Diego Forlán eat for breakfast on the day Uruguay played Ghana in the 2010 World Cup? | [Readable evidence card](evidence/runs/20260930T070334-ask-ce3224.md) |
 
 ### Wiki in Obsidian
 
@@ -58,7 +62,7 @@ The screenshots show the actual vault, not mockups. Graph filter: `path:wiki/`; 
 |---|---|
 | Device | Apple M4; 16 GB unified memory; macOS 26.6.2 |
 | Model | `gemma4:e4b-it-q4_K_M`; GGUF; Q4_K_M; Ollama 0.35.0 |
-| Observed wall-clock call time | Median 18.09 seconds; range 3.71–68.77 seconds across 35 E4B calls |
+| Observed wall-clock call time | Historical 35-call sample: median 18.09 seconds; range 3.71–68.77 seconds across 35 E4B calls |
 | Sampled peak Ollama process RSS | 4.63 GiB; not total unified-memory/GPU use |
 
 [Raw measurements](evidence/measurements.json), [device record](evidence/device.json), and [measurement limitations](evidence/Validation.md) are included. Some requests queued behind ingestion; these are workflow timings, not an isolated speed benchmark.
@@ -73,7 +77,7 @@ Tested on macOS 26.6.2, Apple M4 (10 CPU cores, 10 GPU cores), 16 GB unified mem
 
 ```sh
 git clone https://github.com/sbardacosta-code/uruguay-2010-wiki.git
-cd uruguay-2010
+cd uruguay-2010-wiki
 brew install ollama
 brew install --cask obsidian
 ./scripts/start_ollama.sh
@@ -105,13 +109,15 @@ Chat supports `/notes QUESTION`, `/search QUERY`, `/reset`, `/save`, and `/quit`
 
 ## Sources, retrieval, and generated notes
 
-Seven English source articles are included. Immutable downloaded HTML lives in `research/originals/`; attributed text extractions live in `vault/raw/`. [The catalog](research/sources.json) records URLs, revisions, licenses, hashes, and transformations. Table cells are flattened into pipe-separated rows for readability. Source snapshots are preserved; derived text formatting is documented. The [dossier](Uruguay%202010%20Research%20Dossier.md), [match data](data/matches.json), [23-player squad](data/squad.csv), and [18 qualifying fixtures](data/qualifiers.csv) provide additional human-readable research.
+Seven English source articles are included. Immutable downloaded HTML lives in `vault/raw/originals/`; attributed text extractions live in `vault/raw/`. [The catalog](research/sources.json) records URLs, revisions, licenses, hashes, and transformations. Table cells are flattened into pipe-separated rows for readability. Source snapshots are preserved; derived text formatting is documented. The [dossier](Uruguay%202010%20Research%20Dossier.md), [match data](data/matches.json), [23-player squad](data/squad.csv), and [18 qualifying fixtures](data/qualifiers.csv) provide additional human-readable research.
 
-Retrieval indexes 16 relevant sections from those sources in SQLite FTS5. Chunks contain up to 240 words with a 45-word overlap and retain exact character offsets into the source text. BM25 ranking, heading matches, and a few domain-specific query expansions select up to six passages. Broad group-stage questions reserve coverage of the table and all three matches; named-match questions preserve the opening narrative. This is lexical RAG, not an embedding database. Neither answer keys, chat history, research summaries, nor generated notes enter the index.
+Retrieval indexes 16 relevant sections from those sources in SQLite FTS5. Chunks contain up to 240 words with a 45-word overlap and retain exact character offsets into the source text. BM25 ranking, heading matches, and generic vocabulary expansion select up to six passages. Later-round coverage uses stage headings from the original article; opponent and coach names are no longer injected by query expansion. Broad group-stage questions reserve coverage of the table and all three matches; named-match questions preserve the opening narrative. This is lexical RAG, not an embedding database. Neither answer keys, chat history, research summaries, nor generated notes enter the index.
 
 `ingest` builds the source index and asks Gemma to generate 13 topic notes from original source sections. The harness supplies readable headings, source references, and related-note links. Generation is capped at the first 1,400 words of each section; traces state when truncation occurred. The model context is 8,192 tokens, with temperature 0 and seed 42. Answer generation allows 1,200 output tokens; note generation allows 750. Larger questions may need to be split.
 
-A content/configuration/prompt fingerprint prevents duplicate generation and preserves reviewed edits. `--force` backs up the prior note in `.local/note_backups/`. `--index-only` enables search without a running model. New sources require catalog and section configuration changes; this deliberately small implementation does not ingest arbitrary folders automatically.
+A content/configuration/prompt fingerprint prevents duplicate generation and preserves reviewed edits. A tracked baseline manifest also preserves those notes in a fresh clone; later generation state lives in `.local/`. `--force` backs up the prior note in `.local/note_backups/`. `--index-only` enables search without a running model. New sources require catalog and section configuration changes; this deliberately small implementation does not ingest arbitrary folders automatically.
+
+The [timestamped resource snapshot](evidence/resource-availability.json) records macOS memory availability and free disk space after installation. These fluctuate and are distinct from installed RAM or sampled model RSS.
 
 ## Model choice and evidence
 
@@ -129,7 +135,7 @@ The sources are mainly Wikipedia snapshots plus an English Wikinews draw report.
 
 ## Offline demonstration and submission
 
-Local inference while connected does not establish an offline demo. After the model and sources are downloaded, follow [START_HERE.md](START_HERE.md), disconnect Wi-Fi/Ethernet, and run `./scripts/offline_demo.sh`. It records network observations, actual CLI output, fresh local ingestion, the research tests, conversational follow-ups, isolation, and search after model unloading. Capture the disconnected network and terminal results before reconnecting. Keep those real outputs; do not replace them with expected answers.
+Local inference while connected does not establish an offline demo. After the model and sources are downloaded, follow [START_HERE.md](START_HERE.md), disconnect Wi-Fi/Ethernet, and run `./scripts/offline_demo.sh`. It records network observations, actual CLI output, fresh local ingestion, the research tests, conversational follow-ups, isolation, and search after model unloading. Each attempt is stored in a timestamped subfolder under `evidence/offline/`, preserving earlier attempts. Capture the disconnected network and terminal results before reconnecting. Keep those real outputs; do not replace them with expected answers.
 
 The project repository is public at [sbardacosta-code/uruguay-2010-wiki](https://github.com/sbardacosta-code/uruguay-2010-wiki). Submission through the course portal remains a user action. Before sharing, inspect evidence for any personal content you added. Keep the source catalog and license notices; exclude `.local/`, model weights, and personal Obsidian workspace state.
 

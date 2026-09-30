@@ -1,0 +1,86 @@
+[
+  {
+    "source_id": "S01",
+    "path": "vault/raw/originals/Group A Matches.html",
+    "sha256": "8c2a27a99dacb6d6801cdaa049314192e72fb151c134fdec1d2052e5f909a61c",
+    "matches_catalog": true
+  },
+  {
+    "source_id": "S01",
+    "path": "vault/raw/Group A Matches.txt",
+    "sha256": "df4853e48459b8957e371a4f9b57a3d648a149a70155592c0299e25f81ca7dae",
+    "matches_catalog": true
+  },
+  {
+    "source_id": "S02",
+    "path": "vault/raw/originals/Knockout Stage Matches.html",
+    "sha256": "c742b31f94c99d1381af3a01dfd4017783ecdbf79f46ed5120cfaad403bc73fb",
+    "matches_catalog": true
+  },
+  {
+    "source_id": "S02",
+    "path": "vault/raw/Knockout Stage Matches.txt",
+    "sha256": "fe9f94e2abc0afafd2ed0c49ee9df2fe21ee94c6572e2faf69b97936447db897",
+    "matches_catalog": true
+  },
+  {
+    "source_id": "S03",
+    "path": "vault/raw/originals/World Cup Squads.html",
+    "sha256": "cfae51a8b850d21a3ab044273f68bc5b6f2c323341fe160ea9819dd7fbe7a33e",
+    "matches_catalog": true
+  },
+  {
+    "source_id": "S03",
+    "path": "vault/raw/World Cup Squads.txt",
+    "sha256": "73f82d13c517b826943cb105e9deeb6434940c1d3b0ac1ca7caff0daef7597d1",
+    "matches_catalog": true
+  },
+  {
+    "source_id": "S04",
+    "path": "vault/raw/originals/South American Qualification.html",
+    "sha256": "f1d1f3f3304b73706171409d1f49b512321d92d70ea665769d776fc078e92caf",
+    "matches_catalog": true
+  },
+  {
+    "source_id": "S04",
+    "path": "vault/raw/South American Qualification.txt",
+    "sha256": "a436d3458a73b201a4c195092b90c38a568db751052ce8f817a55a5bbb420087",
+    "matches_catalog": true
+  },
+  {
+    "source_id": "S05",
+    "path": "vault/raw/originals/Costa Rica Uruguay Playoff.html",
+    "sha256": "bb08111998f79579cc3625d04289aad1b4899df040912159c1bb21fa86a5c557",
+    "matches_catalog": true
+  },
+  {
+    "source_id": "S05",
+    "path": "vault/raw/Costa Rica Uruguay Playoff.txt",
+    "sha256": "da2751aed991aee4a266c576350891e8f930edef63a32ffa9b431f922971d065",
+    "matches_catalog": true
+  },
+  {
+    "source_id": "S06",
+    "path": "vault/raw/originals/World Cup Overview.html",
+    "sha256": "307b84523cc0da84ab0db34fc9510bb1fc233221d8abfef56aae97d06a8f0d1a",
+    "matches_catalog": true
+  },
+  {
+    "source_id": "S06",
+    "path": "vault/raw/World Cup Overview.txt",
+    "sha256": "9e86c75ee72aaec4e0dba18e9f5473cc5f071c3bc498f80db14f5d8357af3736",
+    "matches_catalog": true
+  },
+  {
+    "source_id": "S07",
+    "path": "vault/raw/originals/World Cup Group Draw.html",
+    "sha256": "ff7f7b6ad071e7f02011a6189661ab8a5a2fa87725c44ee8ebcd03a7e3398b8b",
+    "matches_catalog": true
+  },
+  {
+    "source_id": "S07",
+    "path": "vault/raw/World Cup Group Draw.txt",
+    "sha256": "32d34c7b62b9d60f20ea7f864f8d843786e2d3bde0a08f76df28d21b656cc6ce",
+    "matches_catalog": true
+  }
+]

@@ -12,16 +12,19 @@ The assignment requires CLI ingestion, all four research questions, chat capabil
 4. Let the complete script finish. Keep failures and error messages. Capture the final output before reconnecting.
 5. Review the regenerated World Cup Group Draw note against its original. Reconnect, review all test results, then commit and push the evidence to the same repository.
 
+Each attempt gets its own timestamped subfolder, such as `20260930T070000Z/` (example only). The filenames below live inside that folder. Previous attempts are retained.
+
 ## Files to publish after the run
 
 | File | Purpose | Current status |
 |---|---|---|
 | `environment.txt` | UTC time, user attestation, OS network observations, exact local model/runtime identity | Not captured |
+| `network-after.txt` | OS network observations after recording | Not captured |
 | `terminal.txt` | Actual offline ingestion, research questions, chat/follow-up, isolation, and model-free search output | Not captured |
 | `wifi-off.png` and result screenshots, or a screen recording | Visible network state and real terminal interaction | Not captured |
-| `review.md` | Links to this run’s individual cards in `../runs/`, assessment of answers/citations, and any failures | Not written |
+| `review.md` | Links to this run’s individual cards in `../../runs/` from a timestamped run folder, assessment of answers/citations, and any failures | Not written |
 
-The script creates the first two files. Individual CLI evidence cards are saved in `../runs/`; the transcript prints their paths. Save visual captures in this folder. For a large recording, use a GitHub release attachment and link it here instead of exceeding GitHub’s file-size limit.
+The script creates the network observations and transcript. Individual CLI evidence cards are saved in `evidence/runs/`; the transcript prints their paths. Save visual captures in this folder. For a large recording, use a GitHub release attachment and link it here instead of exceeding GitHub’s file-size limit.
 
 ## Review before marking complete
 

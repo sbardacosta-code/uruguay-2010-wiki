@@ -1,0 +1,9 @@
+{
+  "recorded_at": "2026-09-30T06:44:36.417764+00:00",
+  "purpose": "Current resource snapshot after model installation, not a reconstruction of the initial setup state",
+  "memory_pressure_free_percent": 20,
+  "memory_pressure_output": "The system has 17179869184 (1048576 pages with a page size of 16384).\nSystem-wide memory free percentage: 20%\n",
+  "vm_stat_output": "Mach Virtual Memory Statistics: (page size of 16384 bytes)\nPages free:                                     3664.\nPages active:                                 104593.\nPages inactive:                                93570.\nPages speculative:                              9721.\nPages throttled:                                   0.\nPages wired down:                             524360.\nPages purgeable:                                   2.\n\"Translation faults\":                     6009252254.\nPages copy-on-write:                       122337607.\nPages zero filled:                        3050604628.\nPages reactivated:                        1948177524.\nPages purged:                              547696219.\nFile-backed pages:                             78398.\nAnonymous pages:                              129486.\nPages stored in compressor:                  2346059.\nPages occupied by compressor:                 271353.\nDecompressions:                           2336367976.\nCompressions:                             2500124089.\nPageins:                                   144571870.\nPageouts:                                    7399405.\nSwapins:                                    29091364.\nSwapouts:                                   34077772.\n",
+  "free_disk_bytes": 118265311232,
+  "available_memory_note": "macOS memory_pressure free percentage is an OS-reported availability indicator, not a promise that this fraction is immediately allocatable to a model. vm_stat categories are retained without treating inactive memory as guaranteed free."
+}

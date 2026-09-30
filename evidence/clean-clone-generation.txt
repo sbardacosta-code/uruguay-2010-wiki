@@ -1,0 +1,14 @@
+Generated: World Cup Group Draw
+{
+  "index": {
+    "sources": 7,
+    "sections": 16,
+    "passages": 55
+  },
+  "generated": [
+    "World Cup Group Draw"
+  ],
+  "skipped": [],
+  "wall_seconds": 18.484,
+  "evidence_path": "evidence/runs/20260930T065600-ingest-summary-102c73.json"
+}

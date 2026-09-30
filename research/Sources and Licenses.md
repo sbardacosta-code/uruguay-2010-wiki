@@ -1,6 +1,6 @@
 # Sources and Licenses
 
-Seven original English articles form the downloaded research corpus. English filenames and documentation are used throughout. Proper names retain their original spelling. Full HTML snapshots are preserved in `research/originals/`; extracted article text is in `vault/raw/`.
+Seven original English articles form the downloaded research corpus. English filenames and documentation are used throughout. Proper names retain their original spelling. Full HTML snapshots are preserved in `vault/raw/originals/`; extracted article text is in `vault/raw/`.
 
 ## S01 2010 FIFA World Cup Group A
 
@@ -8,7 +8,7 @@ Author attribution: Wikipedia contributors. Language: English.
 
 [Article](https://en.wikipedia.org/wiki/2010_FIFA_World_Cup_Group_A) · [Consulted revision](https://en.wikipedia.org/w/index.php?title=2010_FIFA_World_Cup_Group_A&oldid=1376275240) · [History and contributors](https://en.wikipedia.org/w/index.php?title=2010_FIFA_World_Cup_Group_A&action=history).
 
-Local text: `vault/raw/Group A Matches.txt`. Original download: `research/originals/Group A Matches.html`. Extracted words: 3,476.
+Local text: `vault/raw/Group A Matches.txt`. Original download: `vault/raw/originals/Group A Matches.html`. Extracted words: 3,476.
 
 License links supplied by the page: [Creative Commons](https://creativecommons.org/licenses/by-sa/4.0/deed.en).
 
@@ -18,7 +18,7 @@ Author attribution: Wikipedia contributors. Language: English.
 
 [Article](https://en.wikipedia.org/wiki/2010_FIFA_World_Cup_knockout_stage) · [Consulted revision](https://en.wikipedia.org/w/index.php?title=2010_FIFA_World_Cup_knockout_stage&oldid=1376275247) · [History and contributors](https://en.wikipedia.org/w/index.php?title=2010_FIFA_World_Cup_knockout_stage&action=history).
 
-Local text: `vault/raw/Knockout Stage Matches.txt`. Original download: `research/originals/Knockout Stage Matches.html`. Extracted words: 12,190.
+Local text: `vault/raw/Knockout Stage Matches.txt`. Original download: `vault/raw/originals/Knockout Stage Matches.html`. Extracted words: 12,190.
 
 License links supplied by the page: [Creative Commons](https://creativecommons.org/licenses/by-sa/4.0/deed.en).
 
@@ -28,7 +28,7 @@ Author attribution: Wikipedia contributors. Language: English.
 
 [Article](https://en.wikipedia.org/wiki/2010_FIFA_World_Cup_squads) · [Consulted revision](https://en.wikipedia.org/w/index.php?title=2010_FIFA_World_Cup_squads&oldid=1376275289) · [History and contributors](https://en.wikipedia.org/w/index.php?title=2010_FIFA_World_Cup_squads&action=history).
 
-Local text: `vault/raw/World Cup Squads.txt`. Original download: `research/originals/World Cup Squads.html`. Extracted words: 14,016.
+Local text: `vault/raw/World Cup Squads.txt`. Original download: `vault/raw/originals/World Cup Squads.html`. Extracted words: 14,016.
 
 License links supplied by the page: [Creative Commons](https://creativecommons.org/licenses/by-sa/4.0/deed.en).
 
@@ -38,7 +38,7 @@ Author attribution: Wikipedia contributors. Language: English.
 
 [Article](https://en.wikipedia.org/wiki/2010_FIFA_World_Cup_qualification_(CONMEBOL)) · [Consulted revision](https://en.wikipedia.org/w/index.php?title=2010_FIFA_World_Cup_qualification_(CONMEBOL)&oldid=1376275260) · [History and contributors](https://en.wikipedia.org/w/index.php?title=2010_FIFA_World_Cup_qualification_%28CONMEBOL%29&action=history).
 
-Local text: `vault/raw/South American Qualification.txt`. Original download: `research/originals/South American Qualification.html`. Extracted words: 3,504.
+Local text: `vault/raw/South American Qualification.txt`. Original download: `vault/raw/originals/South American Qualification.html`. Extracted words: 3,504.
 
 License links supplied by the page: [Creative Commons](https://creativecommons.org/licenses/by-sa/4.0/deed.en).
 
@@ -48,7 +48,7 @@ Author attribution: Wikipedia contributors. Language: English.
 
 [Article](https://en.wikipedia.org/wiki/2010_FIFA_World_Cup_qualification_(CONCACAF%E2%80%93CONMEBOL_play-off)) · [Consulted revision](https://en.wikipedia.org/w/index.php?title=2010_FIFA_World_Cup_qualification_(CONCACAF%E2%80%93CONMEBOL_play-off)&oldid=1376275251) · [History and contributors](https://en.wikipedia.org/w/index.php?title=2010_FIFA_World_Cup_qualification_%28CONCACAF%E2%80%93CONMEBOL_play-off%29&action=history).
 
-Local text: `vault/raw/Costa Rica Uruguay Playoff.txt`. Original download: `research/originals/Costa Rica Uruguay Playoff.html`. Extracted words: 820.
+Local text: `vault/raw/Costa Rica Uruguay Playoff.txt`. Original download: `vault/raw/originals/Costa Rica Uruguay Playoff.html`. Extracted words: 820.
 
 License links supplied by the page: [Creative Commons](https://creativecommons.org/licenses/by-sa/4.0/deed.en).
 
@@ -58,7 +58,7 @@ Author attribution: Wikipedia contributors. Language: English.
 
 [Article](https://en.wikipedia.org/wiki/2010_FIFA_World_Cup) · [Consulted revision](https://en.wikipedia.org/w/index.php?title=2010_FIFA_World_Cup&oldid=1377514614) · [History and contributors](https://en.wikipedia.org/w/index.php?title=2010_FIFA_World_Cup&action=history).
 
-Local text: `vault/raw/World Cup Overview.txt`. Original download: `research/originals/World Cup Overview.html`. Extracted words: 17,382.
+Local text: `vault/raw/World Cup Overview.txt`. Original download: `vault/raw/originals/World Cup Overview.html`. Extracted words: 17,382.
 
 License links supplied by the page: [Creative Commons](https://creativecommons.org/licenses/by-sa/4.0/deed.en).
 
@@ -68,7 +68,7 @@ Author attribution: Wikinews contributors. Language: English.
 
 [Article](https://en.wikinews.org/wiki/Final_draw_sets_groups_for_FIFA_World_Cup_2010) · [Consulted revision](https://en.wikinews.org/w/index.php?title=Final_draw_sets_groups_for_FIFA_World_Cup_2010&oldid=4817826) · [History and contributors](https://en.wikinews.org/w/index.php?title=Final_draw_sets_groups_for_FIFA_World_Cup_2010&action=history).
 
-Local text: `vault/raw/World Cup Group Draw.txt`. Original download: `research/originals/World Cup Group Draw.html`. Extracted words: 189.
+Local text: `vault/raw/World Cup Group Draw.txt`. Original download: `vault/raw/originals/World Cup Group Draw.html`. Extracted words: 189.
 
 License links supplied by the page: [Creative Commons](https://creativecommons.org/licenses/by/2.5/), [Creative Commons](https://creativecommons.org/licenses/by/4.0/).
 

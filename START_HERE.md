@@ -54,7 +54,7 @@ Download and validate everything first. Then disconnect Wi-Fi and Ethernet, keep
 ./scripts/offline_demo.sh
 ```
 
-The script asks you to attest that the Mac is disconnected and records OS network observations plus the actual CLI output. It regenerates a note, runs all four research questions, checks chat and follow-ups, verifies that a fictional chat claim does not become research evidence, and searches with the model unloaded.
+The script asks you to attest that the Mac is disconnected and records OS network observations plus the actual CLI output in a new timestamped folder under `evidence/offline/`. Earlier attempts are preserved. It regenerates a note, runs all four research questions, checks chat and follow-ups, verifies that a fictional chat claim does not become research evidence, and searches with the model unloaded.
 
 Review the regenerated World Cup Group Draw note against its source. Take screenshots showing the disconnected network and terminal results. Reconnect afterward. Local model calls made while the Mac is connected are useful tests, but are not proof of an offline demonstration.
 
@@ -63,3 +63,5 @@ Review the regenerated World Cup Group Draw note against its source. Take screen
 Ready: seven source articles, thirteen reviewed topic notes, linked navigation, the local CLI, actual model test evidence, memory/timing measurements, and three Obsidian screenshots. Read `evidence/Validation.md` for successes and observed failures.
 
 Remaining: run the truly disconnected demo, inspect its results, submit the public repository URL through your course portal. The public repository is https://github.com/sbardacosta-code/uruguay-2010-wiki. Course-portal submission has not been performed.
+
+Read [Decisions and walkthrough](DECISIONS_AND_WALKTHROUGH.md) to understand the choices and trace a question through the code.
