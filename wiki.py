@@ -124,7 +124,7 @@ def ask(question,config,mode='ask'):
 def needs_notes(message):
     lower=message.lower()
     if lower.startswith('/notes '):return True
-    if any(x in lower for x in ['draft','brainstorm','study plan','make that','make it','shorter','what can','hello','hi there']):return False
+    if any(x in lower for x in ['fictional','imaginary','draft','brainstorm','study plan','make that','make it','shorter','what can','hello','hi there']):return False
     return bool(re.search(r'\b(uruguay|ghana|forlan|forlán|suarez|suárez|muslera|abreu|2010|group a|tabarez|tabárez)\b',lower) and re.search(r'\b(who|what|when|where|how|did|was|were|tell|explain|describe)\b',lower))
 
 def chat_turn(message,history,config):
@@ -157,7 +157,8 @@ def ingest(config,index_only=False,source_id=None,force=False):
     model=LocalModel(config);model.identity()
     sections={(s['source_id'],s['section']):s for s in selected_sections(ROOT)}
     manifest_path=ROOT/'.local/ingest_manifest.json'
-    manifest=json.loads(manifest_path.read_text()) if manifest_path.exists() else {}
+    baseline=ROOT/'research/ingest_manifest.json'
+    manifest=json.loads(manifest_path.read_text()) if manifest_path.exists() else (json.loads(baseline.read_text()) if baseline.exists() else {})
     generated=[];skipped=[]
     for relative,sid,title,related in TOPICS:
         if source_id and sid!=source_id:continue

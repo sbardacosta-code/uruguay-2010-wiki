@@ -1,0 +1,80 @@
+{
+  "Tournament/Group A Campaign": {
+    "fingerprint": "2dbf7bb321bd6d98807884e282377ca1e36918eac5f54601dafe3eb7501ef6b9",
+    "evidence": "evidence/runs/20260930T055715-ingest-f64cce.json",
+    "source_id": "S01",
+    "generated_at": "2026-09-30T05:57:15.562931+00:00"
+  },
+  "Matches/Uruguay and France": {
+    "fingerprint": "684b47ef4fb0572e65087d3e4f51c501b23f2a2729be75df687e43b354fc8f63",
+    "evidence": "evidence/runs/20260930T055751-ingest-759c4a.json",
+    "source_id": "S01",
+    "generated_at": "2026-09-30T05:57:51.743334+00:00"
+  },
+  "Matches/Uruguay and South Africa": {
+    "fingerprint": "1a08812c712a7cee10df6924744476c98f4b8e40ff02bc6a459e0d73be1e8169",
+    "evidence": "evidence/runs/20260930T055809-ingest-104a14.json",
+    "source_id": "S01",
+    "generated_at": "2026-09-30T05:58:09.691304+00:00"
+  },
+  "Matches/Uruguay and Mexico": {
+    "fingerprint": "7c31de7e00cc72e0eacf1f7b30024186202cf71c073ef7b69965a6c78c8165a7",
+    "evidence": "evidence/runs/20260930T055824-ingest-e99347.json",
+    "source_id": "S01",
+    "generated_at": "2026-09-30T05:58:24.653067+00:00"
+  },
+  "Matches/Uruguay and South Korea": {
+    "fingerprint": "f6babab0973f7a2f01261471e40d9e354df3cdb5fedd69c26947bbba75620d80",
+    "evidence": "evidence/runs/20260930T055839-ingest-6aba27.json",
+    "source_id": "S02",
+    "generated_at": "2026-09-30T05:58:39.643954+00:00"
+  },
+  "Matches/Uruguay and Ghana": {
+    "fingerprint": "f8d9c222bea58e977c50bcd5685334ceb15dde81c909f5818fc2beb1a6871b64",
+    "evidence": "evidence/runs/20260930T055902-ingest-870e1c.json",
+    "source_id": "S02",
+    "generated_at": "2026-09-30T05:59:02.555659+00:00"
+  },
+  "Matches/Uruguay and Netherlands": {
+    "fingerprint": "817b24304a6f0180684bff174e385cd2f5ca401f24db574554e4d4c2ee282af1",
+    "evidence": "evidence/runs/20260930T055917-ingest-f31209.json",
+    "source_id": "S02",
+    "generated_at": "2026-09-30T05:59:17.417591+00:00"
+  },
+  "Matches/Uruguay and Germany": {
+    "fingerprint": "bfef46ba92c5e73dbae1fd37279979f8700e11c207bf0c155574c833564791ff",
+    "evidence": "evidence/runs/20260930T055935-ingest-0c280a.json",
+    "source_id": "S02",
+    "generated_at": "2026-09-30T05:59:35.734884+00:00"
+  },
+  "Team/Uruguay World Cup Squad": {
+    "fingerprint": "33d135939939b184b745d2a0c1e87d4d1e9d3b3329247ba8d96d9caa1d66fb69",
+    "evidence": "evidence/runs/20260930T055953-ingest-b251a9.json",
+    "source_id": "S03",
+    "generated_at": "2026-09-30T05:59:53.861463+00:00"
+  },
+  "Qualification/South American Qualifying": {
+    "fingerprint": "c5379f2bebb82f76e43ab355bd29e0688c433e9a6c61c6d16ec88a6e2a5efd23",
+    "evidence": "evidence/runs/20260930T060058-ingest-2c90e5.json",
+    "source_id": "S04",
+    "generated_at": "2026-09-30T06:00:58.759213+00:00"
+  },
+  "Qualification/Costa Rica Playoff": {
+    "fingerprint": "7104815a3b8b184ffbc3f9c137543ef08a66e2fd0ba2a0911361c65ac5f1ccdc",
+    "evidence": "evidence/runs/20260930T060151-ingest-26c42e.json",
+    "source_id": "S05",
+    "generated_at": "2026-09-30T06:01:51.059596+00:00"
+  },
+  "Team/Diego Forlan at the World Cup": {
+    "fingerprint": "1514c3f7f8fda0759472386b5976e9d0b68fec7458c1eb9ab5616c6a387c48b9",
+    "evidence": "evidence/runs/20260930T060220-ingest-21aba4.json",
+    "source_id": "S06",
+    "generated_at": "2026-09-30T06:02:20.750181+00:00"
+  },
+  "Tournament/World Cup Group Draw": {
+    "fingerprint": "561611dff6a16679f9972c6ebf80c9ad4a38cc19f58f588ef29ce736a3d202ae",
+    "evidence": "evidence/runs/20260930T060256-ingest-fe29e1.json",
+    "source_id": "S07",
+    "generated_at": "2026-09-30T06:02:56.629136+00:00"
+  }
+}

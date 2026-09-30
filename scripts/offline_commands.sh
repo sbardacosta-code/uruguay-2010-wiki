@@ -2,10 +2,7 @@
 set -eu
 ./wiki --help
 ./wiki ingest vault/raw --source S07 --force
-./wiki ask "What were Uruguay's results in the group stage of the 2010 World Cup, and how many points did they finish with?" --mode local
-./wiki ask "How was Uruguay's match against Ghana decided, and what did Muslera and Abreu do?" --mode local
-./wiki ask "Who did Uruguay play after the quarter-finals, and where did they finish?" --mode local
-./wiki ask "What did Diego Forlan eat for breakfast on the day Uruguay played Ghana in the 2010 World Cup?" --mode local
+python3 scripts/ask_evaluation_questions.py
 ./wiki chat <<'CHAT'
 What can we do?
 What can you help me with?

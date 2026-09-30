@@ -1,8 +1,7 @@
 #!/bin/sh
-# Run only after disconnecting Wi-Fi/Ethernet and starting the local Ollama server.
+# Run after disconnecting all internet connections and starting local Ollama.
 set -eu
 cd "$(dirname "$0")/.."
-mkdir -p evidence/offline
 printf 'Turn off Wi-Fi and unplug Ethernet before continuing.\n'
 printf 'Confirm that this Mac is disconnected from the internet (type DISCONNECTED): '
 read -r confirmation
@@ -10,15 +9,26 @@ if [ "$confirmation" != DISCONNECTED ]; then
   printf 'No offline run started.\n'
   exit 1
 fi
-# Store OS network observations as well as the user's attestation.
-{
+run_folder="evidence/offline/$(date -u +%Y%m%dT%H%M%SZ)"
+mkdir -p "$run_folder"
+network_observations() {
   date -u
-  printf '\nUser attestation: disconnected from internet\n'
-  scutil --nwi
-  networksetup -getairportpower en0
+  scutil --nwi || true
+  wifi_device=$(networksetup -listallhardwareports | awk '/Hardware Port: (Wi-Fi|AirPort)/ {getline; print $2; exit}')
+  if [ -n "$wifi_device" ]; then
+    networksetup -getairportpower "$wifi_device" || true
+  else
+    printf 'No Wi-Fi interface identified; inspect all active connections manually.\n'
+  fi
+}
+{
+  printf 'User attestation: disconnected from internet\n'
+  network_observations
   printf '\nRuntime identity\n'
   ./wiki status
-} > evidence/offline/environment.txt 2>&1
-# macOS script records real terminal output to a file. Every command starts a new CLI.
-/usr/bin/script -q evidence/offline/terminal.txt /bin/sh scripts/offline_commands.sh
-printf '\nSaved evidence/offline/terminal.txt. Capture the terminal and network settings before reconnecting.\n'
+} > "$run_folder/environment.txt" 2>&1
+# -x makes executed commands visible. Keep each attempt, including failures.
+/usr/bin/script -q "$run_folder/terminal.txt" /bin/sh -x scripts/offline_commands.sh
+network_observations > "$run_folder/network-after.txt" 2>&1
+printf '\nSaved %s. Capture terminal and network settings before reconnecting.\n' "$run_folder"
+printf 'Inspect the transcript: recording completion alone does not mean every test passed.\n'

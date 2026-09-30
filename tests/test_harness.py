@@ -2,7 +2,7 @@ import json
 import unittest
 from unittest.mock import patch
 from pathlib import Path
-from retrieval import build_index,search,selected_sections,make_chunks
+from retrieval import build_index,search,selected_sections,make_chunks,query_terms
 from wiki import ROOT,load_config,validate_answer,needs_notes,ask
 from local_model import LocalModel,ModelError
 
@@ -30,6 +30,14 @@ class HarnessTests(unittest.TestCase):
     def test_supported_reference_validates(self):
         text=validate_answer({'status':'answered','claims':[{'text':'The match was drawn.','evidence':[{'passage':'P1','quote':'final score was 1–1'}]}],'reason':''},[{'id':'S1','text':'The final score was 1–1.'}])
         self.assertIn('[S1]',text)
+    def test_stage_expansion_does_not_supply_opponents(self):
+        terms=query_terms('Who did Uruguay play after the quarter-finals?')
+        self.assertNotIn('netherlands',terms)
+        self.assertNotIn('germany',terms)
+        titles={p['section'] for p in search(ROOT,'Who did Uruguay play after the quarter-finals, and where did they finish?')}
+        self.assertTrue({'Uruguay vs Netherlands','Match for third place','Final standings'}<=titles)
+    def test_fiction_stays_out_of_research_mode(self):
+        self.assertFalse(needs_notes('Tell me an imaginary story about Uruguay with a fictional password.'))
     def test_mode_routing(self):
         for message in ['What can you help me with?','What can we do?','Make that shorter','Draft a study plan about Uruguay']:
             self.assertFalse(needs_notes(message))

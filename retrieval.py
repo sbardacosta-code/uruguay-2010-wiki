@@ -44,7 +44,9 @@ def selected_sections(root):
             raise ValueError('Source changed: '+source['text_path']+'. Restore it or explicitly refresh the source catalog.')
         start=marker(text,begin,last=(title=='Match for third place')) if begin else 0
         finish=marker(text,end,start+len(begin or '')) if end else len(text)
-        result.append(dict(source_id=sid,path=source['text_path'],section=title,start=start,end=finish,text=text[start:finish],source_url=source['permanent_url']))
+        stage_matches=list(re.finditer(r'(?m)^(Round of 16|Quarter-finals|Semi-finals|Match for third place|Final)\s*$',text[:start+len(begin or '')]))
+        stage=stage_matches[-1].group(1) if sid=='S02' and stage_matches else None
+        result.append(dict(stage=stage,source_id=sid,path=source['text_path'],section=title,start=start,end=finish,text=text[start:finish],source_url=source['permanent_url']))
     return result
 
 def make_chunks(sections,words=240,overlap=45):
@@ -77,9 +79,9 @@ def query_terms(query):
     normalized=''.join(c for c in unicodedata.normalize('NFKD',query.lower()) if not unicodedata.combining(c))
     terms=[x for x in re.findall(r'[a-z0-9]+',normalized) if x not in STOP and len(x)>1]
     if 'group' in terms:terms+=['standings']
-    if 'after' in terms and ('quarter' in terms or 'quarters' in terms):terms+=['semifinal','third','netherlands','germany']
+    if 'after' in terms and ('quarter' in terms or 'quarters' in terms):terms+=['semi','final','third','standings']
     if 'holland' in terms:terms+=['netherlands']
-    if 'coach' in terms or 'manager' in terms:terms+=['tabarez']
+    if any(t.startswith('coach') or t=='manager' for t in terms):terms+=['coach','manager']
     return list(dict.fromkeys(terms))[:30]
 
 def search(root,query,limit=6):
@@ -100,7 +102,11 @@ def search(root,query,limit=6):
     # Broad group-stage questions need coverage across the stage, not six near-duplicates.
     # Named-match questions receive the original opening narrative before supporting details.
     preferred=[]
-    if 'group' in terms and any(t in terms for t in ['results','matches','stage','points']):
+    later_rounds='after' in terms and ('quarter' in terms or 'quarters' in terms)
+    if later_rounds:
+        preferred=[s['section'] for s in selected_sections(Path(root)) if s.get('stage') in ('Semi-finals','Match for third place')]
+        preferred.append('Final standings')
+    elif 'group' in terms and any(t in terms for t in ['results','matches','stage','points']):
         preferred=['Group A standings','Uruguay vs France','South Africa vs Uruguay','Mexico vs Uruguay']
     else:
         for _,title,_,_ in SECTIONS:

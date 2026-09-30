@@ -51,7 +51,7 @@ def collect(item):
   data=response.read();resolved=response.url
  tree=html.fromstring(data)
  text=extract(data)
- original=ROOT/'research/originals'/(name+'.html');original.parent.mkdir(parents=True,exist_ok=True);original.write_bytes(data)
+ original=ROOT/'vault/raw/originals'/(name+'.html');original.parent.mkdir(parents=True,exist_ok=True);original.write_bytes(data)
  raw=ROOT/'vault/raw'/(name+'.txt');raw.write_text(text,encoding='utf-8')
  licenses=sorted(set('https:'+u if u.startswith('//') else u for u in tree.xpath('//a[contains(@href,"creativecommons.org/licenses/")]/@href|//link[contains(@rel,"license")]/@href')))
  permanent=tree.xpath('//*[@id="t-permalink"]/a/@href') or tree.xpath('//a[contains(@href,"oldid=")]/@href')
