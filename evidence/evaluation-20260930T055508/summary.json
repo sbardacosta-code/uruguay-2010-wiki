@@ -1,0 +1,90 @@
+[
+  {
+    "test_id": "ask-01",
+    "question": "What were Uruguay’s results in the group stage of the 2010 World Cup, and how many points did they finish with?",
+    "expected_answer": "A 0–0 draw with France, a 3–0 win over South Africa, and a 1–0 win over Mexico. Uruguay finished first in Group A with seven points.",
+    "expected_sources": [
+      "S01"
+    ],
+    "command": [
+      "/Library/Developer/CommandLineTools/usr/bin/python3",
+      "/Users/REDACTED/Documents/ChatGPT/Class 4/uruguay-2010/wiki.py",
+      "ask",
+      "What were Uruguay’s results in the group stage of the 2010 World Cup, and how many points did they finish with?",
+      "--json"
+    ],
+    "returncode": 0,
+    "network_disconnection": "not verified",
+    "assessment": "Pending review of actual answer and citations",
+    "answer": "Uruguay finished in 1st position in Group A with 7 points. [S01-2e588f5b5f]\n\nUruguay's results in the group stage included a 0–0 draw against France. [S01-54d47d76aa]\n\nUruguay defeated South Africa 3–0. [S01-eca4bd93d3]\n\nUruguay won against Mexico with a score of 1–0. [S01-f6f9b0f76a]",
+    "evidence_path": "evidence/runs/20260930T055537-ask-119801.json",
+    "retrieved_sources": [
+      "S01"
+    ]
+  },
+  {
+    "test_id": "ask-02",
+    "question": "How was Uruguay’s match against Ghana decided, and what did Muslera and Abreu do?",
+    "expected_answer": "The match ended 1–1 after extra time. Uruguay won the shootout 4–2. Muslera saved John Mensah’s and Dominic Adiyiah’s kicks; Abreu converted the decisive kick.",
+    "expected_sources": [
+      "S02"
+    ],
+    "command": [
+      "/Library/Developer/CommandLineTools/usr/bin/python3",
+      "/Users/REDACTED/Documents/ChatGPT/Class 4/uruguay-2010/wiki.py",
+      "ask",
+      "How was Uruguay’s match against Ghana decided, and what did Muslera and Abreu do?",
+      "--json"
+    ],
+    "returncode": 1,
+    "network_disconnection": "not verified",
+    "assessment": "Pending review of actual answer and citations",
+    "error": "Error: Unable to produce a verified answer: Evidence quote is absent from its cited original passage\nEvidence: evidence/runs/20260930T055559-ask-a8e194.json\n"
+  },
+  {
+    "test_id": "ask-03",
+    "question": "Who did Uruguay play after the quarter-finals, and where did they finish?",
+    "expected_answer": "Uruguay lost 2–3 to the Netherlands in the semi-final and 2–3 to Germany in the third-place match, finishing fourth.",
+    "expected_sources": [
+      "S02",
+      "S06"
+    ],
+    "command": [
+      "/Library/Developer/CommandLineTools/usr/bin/python3",
+      "/Users/REDACTED/Documents/ChatGPT/Class 4/uruguay-2010/wiki.py",
+      "ask",
+      "Who did Uruguay play after the quarter-finals, and where did they finish?",
+      "--json"
+    ],
+    "returncode": 0,
+    "network_disconnection": "not verified",
+    "assessment": "Pending review of actual answer and citations",
+    "answer": "After the quarter-finals, Uruguay played Germany in the match for third place. [S02-ba8c11a4d5]\n\nUruguay finished in fourth place in the final standings. [S06-3ebffb8582]",
+    "evidence_path": "evidence/runs/20260930T055616-ask-42ff61.json",
+    "retrieved_sources": [
+      "S02",
+      "S06"
+    ]
+  },
+  {
+    "test_id": "ask-04",
+    "question": "What did Diego Forlán eat for breakfast on the day Uruguay played Ghana in the 2010 World Cup?",
+    "expected_answer": "The sources do not provide this information. The system should explicitly report insufficient evidence.",
+    "expected_sources": [],
+    "command": [
+      "/Library/Developer/CommandLineTools/usr/bin/python3",
+      "/Users/REDACTED/Documents/ChatGPT/Class 4/uruguay-2010/wiki.py",
+      "ask",
+      "What did Diego Forlán eat for breakfast on the day Uruguay played Ghana in the 2010 World Cup?",
+      "--json"
+    ],
+    "returncode": 0,
+    "network_disconnection": "not verified",
+    "assessment": "Pending review of actual answer and citations",
+    "answer": "Insufficient evidence. The provided passages detail the match between Uruguay and Ghana, including goals and penalties, but they do not contain any information about what Diego Forlán ate for breakfast on that day.",
+    "evidence_path": "evidence/runs/20260930T055626-ask-6cdf8d.json",
+    "retrieved_sources": [
+      "S02"
+    ]
+  }
+]

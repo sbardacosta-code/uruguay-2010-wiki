@@ -1,0 +1,14 @@
+test_ask_never_reads_chat_history (test_harness.HarnessTests) ... ok
+test_bad_citation_and_invented_quote_rejected (test_harness.HarnessTests) ... ok
+test_chunks_are_exact_source_substrings (test_harness.HarnessTests) ... ok
+test_cloud_endpoint_rejected (test_harness.HarnessTests) ... ok
+test_group_question_retrieves_all_three_matches (test_harness.HarnessTests) ... ok
+test_mode_routing (test_harness.HarnessTests) ... ok
+test_search_needs_no_model (test_harness.HarnessTests) ... ok
+test_supported_reference_validates (test_harness.HarnessTests) ... ok
+test_test_answers_never_enter_index (test_harness.HarnessTests) ... ok
+
+----------------------------------------------------------------------
+Ran 9 tests in 0.040s
+
+OK

@@ -1,0 +1,9 @@
+{
+  "model": "gemma4:e4b-it-q4_K_M",
+  "ollama_url": "http://127.0.0.1:11434",
+  "context_tokens": 8192,
+  "answer_tokens": 1200,
+  "retrieval_count": 6,
+  "chunk_words": 240,
+  "overlap_words": 45
+}

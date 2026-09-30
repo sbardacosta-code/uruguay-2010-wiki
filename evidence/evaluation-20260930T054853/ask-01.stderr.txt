@@ -1,0 +1,2 @@
+Error: Unable to produce a verified answer: Evidence quote is absent from its cited original passage
+Evidence: evidence/runs/20260930T054905-ask-a87237.json

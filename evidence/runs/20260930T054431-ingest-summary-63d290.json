@@ -1,0 +1,18 @@
+{
+  "interaction_mode": "ingest-summary",
+  "answer": "{\n  \"index\": {\n    \"sources\": 7,\n    \"sections\": 16,\n    \"passages\": 52\n  },\n  \"generated\": [],\n  \"skipped\": [],\n  \"wall_seconds\": 0.023\n}",
+  "result": {
+    "index": {
+      "sources": 7,
+      "sections": 16,
+      "passages": 52
+    },
+    "generated": [],
+    "skipped": [],
+    "wall_seconds": 0.023
+  },
+  "record_id": "20260930T054431-ingest-summary-63d290",
+  "created_at": "2026-09-30T05:44:31.386495+00:00",
+  "execution": "local",
+  "network_disconnection": "not verified by this record"
+}

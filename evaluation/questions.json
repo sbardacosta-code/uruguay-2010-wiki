@@ -1,0 +1,67 @@
+[
+  {
+    "id": "ask-01",
+    "question": "What were Uruguay’s results in the group stage of the 2010 World Cup, and how many points did they finish with?",
+    "expected_answer": "A 0–0 draw with France, a 3–0 win over South Africa, and a 1–0 win over Mexico. Uruguay finished first in Group A with seven points.",
+    "source_ids": [
+      "S01"
+    ],
+    "source_sections": [
+      "Standings",
+      "Uruguay vs France",
+      "South Africa vs Uruguay",
+      "Mexico vs Uruguay"
+    ],
+    "status": "Executed locally; reviewed result in evidence/reviewed-results.json; offline run still pending",
+    "expected_source_paths": [
+      "vault/raw/Group A Matches.txt"
+    ],
+    "actual_evidence_path": "evidence/runs/20260930T060024-ask-e61788.json"
+  },
+  {
+    "id": "ask-02",
+    "question": "How was Uruguay’s match against Ghana decided, and what did Muslera and Abreu do?",
+    "expected_answer": "The match ended 1–1 after extra time. Uruguay won the shootout 4–2. Muslera saved John Mensah’s and Dominic Adiyiah’s kicks; Abreu converted the decisive kick.",
+    "source_ids": [
+      "S02"
+    ],
+    "source_sections": [
+      "Uruguay vs Ghana"
+    ],
+    "status": "Executed locally; reviewed result in evidence/reviewed-results.json; offline run still pending",
+    "expected_source_paths": [
+      "vault/raw/Knockout Stage Matches.txt"
+    ],
+    "actual_evidence_path": "evidence/runs/20260930T060212-ask-e0d205.json"
+  },
+  {
+    "id": "ask-03",
+    "question": "Who did Uruguay play after the quarter-finals, and where did they finish?",
+    "expected_answer": "Uruguay lost 2–3 to the Netherlands in the semi-final and 2–3 to Germany in the third-place match, finishing fourth.",
+    "source_ids": [
+      "S02",
+      "S06"
+    ],
+    "source_sections": [
+      "Uruguay vs Netherlands",
+      "Match for third place",
+      "Final standings"
+    ],
+    "status": "Executed locally; reviewed result in evidence/reviewed-results.json; offline run still pending",
+    "expected_source_paths": [
+      "vault/raw/Knockout Stage Matches.txt",
+      "vault/raw/World Cup Overview.txt"
+    ],
+    "actual_evidence_path": "evidence/runs/20260930T060436-ask-556a03.json"
+  },
+  {
+    "id": "ask-04",
+    "question": "What did Diego Forlán eat for breakfast on the day Uruguay played Ghana in the 2010 World Cup?",
+    "expected_answer": "The sources do not provide this information. The system should explicitly report insufficient evidence.",
+    "source_ids": [],
+    "source_sections": [],
+    "status": "Executed locally; reviewed result in evidence/reviewed-results.json; offline run still pending",
+    "expected_source_paths": [],
+    "actual_evidence_path": "evidence/runs/20260930T060310-ask-12c3dd.json"
+  }
+]

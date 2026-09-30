@@ -1,0 +1,37 @@
+{
+  "command": "./wiki ingest vault/raw",
+  "returncode": 0,
+  "stdout": "{\n  \"index\": {\n    \"sources\": 7,\n    \"sections\": 16,\n    \"passages\": 55\n  },\n  \"generated\": [],\n  \"skipped\": [\n    \"Group A Campaign\",\n    \"Uruguay and France\",\n    \"Uruguay and South Africa\",\n    \"Uruguay and Mexico\",\n    \"Uruguay and South Korea\",\n    \"Uruguay and Ghana\",\n    \"Uruguay and Netherlands\",\n    \"Uruguay and Germany\",\n    \"Uruguay World Cup Squad\",\n    \"South American Qualifying\",\n    \"Costa Rica Playoff\",\n    \"Diego Forlan at the World Cup\",\n    \"World Cup Group Draw\"\n  ],\n  \"wall_seconds\": 0.083,\n  \"evidence_path\": \"evidence/runs/20260930T060531-ingest-summary-1dec8b.json\"\n}\n",
+  "stderr": "",
+  "before": {
+    "vault/wiki/Matches/Uruguay and France.md": "f43ff3aed1e0f704a6e333a6453a87fd34c21a5888c890a4d4dcfa0063e6331d",
+    "vault/wiki/Matches/Uruguay and Germany.md": "7aedcbe6aa8ce16aec1ab5926e998a45474a6d4c4a0a76c4d0c41337a703d2dd",
+    "vault/wiki/Matches/Uruguay and Ghana.md": "4b01aed43ec07f0563b8e038297e6e22a0012aef255efa7a4b6ec2255db0c3ff",
+    "vault/wiki/Matches/Uruguay and Mexico.md": "54d43b7b4c1cf817cd8592ecb4f7d73712f56612fdb72f5f95f04f946ae24ec3",
+    "vault/wiki/Matches/Uruguay and Netherlands.md": "8d2d42189b467e3f938e1c8d10fcb7f703d50667cea7130a40c900083f028fb2",
+    "vault/wiki/Matches/Uruguay and South Africa.md": "06962b1d07af01cac8058507e719aa9bfc69f2890f4b3197339411de0581d9c0",
+    "vault/wiki/Matches/Uruguay and South Korea.md": "4f294563b183f07771f755eac2f1e411bfcc1142c70ab222b20d2bb7236622ce",
+    "vault/wiki/Qualification/Costa Rica Playoff.md": "f48c8ee4480de865b6385b4b88e394f49a062645b1042d28f7279014eaee3cab",
+    "vault/wiki/Qualification/South American Qualifying.md": "3358d9cb98f11943832a1074f81c017c85a6532e2deb9e90683b6a996a5f9ecf",
+    "vault/wiki/Team/Diego Forlan at the World Cup.md": "38e863823c59b151d7cb38aa117d8731b5187f5849596f81c533a986aef86f50",
+    "vault/wiki/Team/Uruguay World Cup Squad.md": "b12d6a768af0473af9638ae9f47560ed6502450f097947400cd1103b6466271a",
+    "vault/wiki/Tournament/Group A Campaign.md": "10a748eb1702d83e541f0c39c502303bb0818a03ed93fdf1fb1003d901ab6c7e",
+    "vault/wiki/Tournament/World Cup Group Draw.md": "067b144bc32fe965ee81306663b1518f4d06fa09be3c9bee928e4a35302dc7e9"
+  },
+  "after": {
+    "vault/wiki/Matches/Uruguay and France.md": "f43ff3aed1e0f704a6e333a6453a87fd34c21a5888c890a4d4dcfa0063e6331d",
+    "vault/wiki/Matches/Uruguay and Germany.md": "7aedcbe6aa8ce16aec1ab5926e998a45474a6d4c4a0a76c4d0c41337a703d2dd",
+    "vault/wiki/Matches/Uruguay and Ghana.md": "4b01aed43ec07f0563b8e038297e6e22a0012aef255efa7a4b6ec2255db0c3ff",
+    "vault/wiki/Matches/Uruguay and Mexico.md": "54d43b7b4c1cf817cd8592ecb4f7d73712f56612fdb72f5f95f04f946ae24ec3",
+    "vault/wiki/Matches/Uruguay and Netherlands.md": "8d2d42189b467e3f938e1c8d10fcb7f703d50667cea7130a40c900083f028fb2",
+    "vault/wiki/Matches/Uruguay and South Africa.md": "06962b1d07af01cac8058507e719aa9bfc69f2890f4b3197339411de0581d9c0",
+    "vault/wiki/Matches/Uruguay and South Korea.md": "4f294563b183f07771f755eac2f1e411bfcc1142c70ab222b20d2bb7236622ce",
+    "vault/wiki/Qualification/Costa Rica Playoff.md": "f48c8ee4480de865b6385b4b88e394f49a062645b1042d28f7279014eaee3cab",
+    "vault/wiki/Qualification/South American Qualifying.md": "3358d9cb98f11943832a1074f81c017c85a6532e2deb9e90683b6a996a5f9ecf",
+    "vault/wiki/Team/Diego Forlan at the World Cup.md": "38e863823c59b151d7cb38aa117d8731b5187f5849596f81c533a986aef86f50",
+    "vault/wiki/Team/Uruguay World Cup Squad.md": "b12d6a768af0473af9638ae9f47560ed6502450f097947400cd1103b6466271a",
+    "vault/wiki/Tournament/Group A Campaign.md": "10a748eb1702d83e541f0c39c502303bb0818a03ed93fdf1fb1003d901ab6c7e",
+    "vault/wiki/Tournament/World Cup Group Draw.md": "067b144bc32fe965ee81306663b1518f4d06fa09be3c9bee928e4a35302dc7e9"
+  },
+  "all_13_notes_unchanged": true
+}

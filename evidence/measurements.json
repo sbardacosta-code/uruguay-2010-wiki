@@ -1,0 +1,9 @@
+{
+  "model": "gemma4:e4b-it-q4_K_M",
+  "call_count": 35,
+  "wall_seconds_min": 3.714,
+  "wall_seconds_median": 18.091,
+  "wall_seconds_max": 68.768,
+  "sampled_peak_ollama_rss_bytes": 4969283584,
+  "notes": "Local calls made while network was connected; some requests queued behind concurrent evaluation and ingestion. Includes failed attempts and repair calls. RSS is not total unified-memory or GPU use."
+}
