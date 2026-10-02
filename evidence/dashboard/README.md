@@ -35,4 +35,4 @@ The HTTP tests check denied arbitrary file paths, cross-origin requests and untr
 
 The UI calls the same `ask`, `chat_turn`, retrieval, and evidence-saving functions as the CLI. No model prompt or source content was changed for this dashboard. The new launcher also supports `python3 dashboard.py --open` and an alternate `--port`. Model weights and Ollama must already be available for Ask/Chat; browsing and Search use local files.
 
-The website assets are entirely local, but a disconnected browser run is still pending. Keep the required CLI offline demonstration and additionally capture the dashboard while disconnected. A ready model badge reports runtime availability only.
+The original checks above were connected. The [later recorded session](../offline/20261002T191406Z/review.md) now shows disconnected dashboard use and CLI tests; publication of that video awaits approval. Keep the required CLI offline demonstration and additionally capture the dashboard while disconnected. A ready model badge reports runtime availability only.

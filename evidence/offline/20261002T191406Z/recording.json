@@ -1,0 +1,26 @@
+{
+  "filename": "Screen Recording 2026-10-02 at 12.05.51 PM.mov",
+  "bytes": 348722421,
+  "sha256": "bd05273b81834055c2afda263b36bef2f739e5092e6bc4f8ac1e1dba210f1e03",
+  "duration_seconds": 684.245,
+  "audio_tracks": 0,
+  "review": "Sampled frames throughout the recording and additional frames around Wi-Fi disconnection and CLI checkpoints; compared against the complete saved transcript and model records.",
+  "publication": "Awaiting explicit approval to publish unedited desktop/account-name footage. Original remains local.",
+  "cli_run": "20261002T191406Z",
+  "approximate_chapters": {
+    "00:03": "Wi-Fi switched off",
+    "00:12": "Local dashboard opens",
+    "00:45": "Group-stage answer",
+    "02:15": "Ghana answer and original evidence",
+    "03:45": "Breakfast question abstention",
+    "04:30": "Chat capabilities",
+    "05:15": "Shortened study plan",
+    "06:45": "Labeled fictional nickname",
+    "07:30": "Unsupported nickname response and Search",
+    "08:15": "CLI demonstration begins",
+    "08:39": "Fresh ingestion and first test",
+    "09:37": "Four tests completed; chat checks follow",
+    "10:23": "Search and empty model list complete",
+    "11:24": "Recording ends"
+  }
+}

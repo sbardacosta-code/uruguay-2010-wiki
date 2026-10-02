@@ -1,0 +1,202 @@
++ set -eu
++ ./wiki --help
+usage: wiki.py [-h] {help,ingest,search,ask,chat,status} ...
+
+Celeste: a local Gemma assistant and source-grounded Uruguay 2010 wiki. No cloud fallback.
+
+positional arguments:
+  {help,ingest,search,ask,chat,status}
+    help                Show available commands
+    ingest              Index original sources and generate linked wiki notes with local Gemma
+    search              Show original passages and paths; does not call the model
+    ask                 Answer a standalone factual question with checked source citations
+    chat                Conversational assistant with recent context and optional source retrieval
+    status              Show exact model, runtime and configuration
+
+optional arguments:
+  -h, --help            show this help message and exit
++ ./wiki ingest vault/raw --source S07 --force
+Generated: World Cup Group Draw
+{
+  "index": {
+    "sources": 7,
+    "sections": 16,
+    "passages": 55
+  },
+  "generated": [
+    "World Cup Group Draw"
+  ],
+  "skipped": [],
+  "wall_seconds": 5.996,
+  "evidence_path": "evidence/runs/20261002T191413-ingest-summary-fbf157.json"
+}
++ python3 scripts/ask_evaluation_questions.py
+
+ask-01: What were Uruguay’s results in the group stage of the 2010 World Cup, and how many points did they finish with?
+Mode: ask | Execution: local | Model: gemma4:e4b-it-q4_K_M
+
+Uruguay finished with 7 points in the Group A standings. [S01-2e588f5b5f]
+
+Uruguay drew 0–0 against France on June 11, 2010. [S01-54d47d76aa]
+
+Uruguay defeated South Africa 3–0 on June 16, 2010. [S01-eca4bd93d3]
+
+Uruguay defeated Mexico 1–0 on June 22, 2010. [S01-f6f9b0f76a]
+[S01-2e588f5b5f] vault/raw/Group A Matches.txt — Group A standings
+[S01-54d47d76aa] vault/raw/Group A Matches.txt — Uruguay vs France
+[S01-eca4bd93d3] vault/raw/Group A Matches.txt — South Africa vs Uruguay
+[S01-f6f9b0f76a] vault/raw/Group A Matches.txt — Mexico vs Uruguay
+[S01-81bc8541e7] vault/raw/Group A Matches.txt — Group A introduction
+
+Evidence: evidence/runs/20261002T191424-ask-858e53.json
+
+ask-02: How was Uruguay’s match against Ghana decided, and what did Muslera and Abreu do?
+Mode: ask | Execution: local | Model: gemma4:e4b-it-q4_K_M
+
+Uruguay won the match against Ghana in a penalty shoot-out with a score of 4–2 after the game finished 1–1 after 120 minutes of play. [S02-4ae80b7615] [S02-30bc6edb29]
+
+Fernando Muslera saved captain John Mensah's penalty during the shoot-out, and he also saved Adiyiah's penalty. [S02-dcf6289ee5]
+
+Sebastián Abreu converted Uruguay's fifth spot kick by lightly chipping it Panenka-style to win the match. [S02-dcf6289ee5]
+[S02-4ae80b7615] vault/raw/Knockout Stage Matches.txt — Uruguay vs Ghana
+[S02-dcf6289ee5] vault/raw/Knockout Stage Matches.txt — Uruguay vs Ghana
+[S02-30bc6edb29] vault/raw/Knockout Stage Matches.txt — Uruguay vs Ghana
+[S02-14897adbca] vault/raw/Knockout Stage Matches.txt — Uruguay vs Ghana
+
+Evidence: evidence/runs/20261002T191458-ask-470bc4.json
+
+ask-03: Who did Uruguay play after the quarter-finals, and where did they finish?
+Mode: ask | Execution: local | Model: gemma4:e4b-it-q4_K_M
+
+Uruguay played the Netherlands in the first semi-final, which the Netherlands won 3–2. [S02-0e476c8e59] [S02-c754bbeb32]
+
+In the match for third place, Germany defeated Uruguay 3–2 to claim third place. [S02-ba8c11a4d5]
+
+Uruguay finished in fourth place in the final standings. [S06-3ebffb8582]
+[S02-0e476c8e59] vault/raw/Knockout Stage Matches.txt — Uruguay vs Netherlands
+[S02-ba8c11a4d5] vault/raw/Knockout Stage Matches.txt — Match for third place
+[S06-3ebffb8582] vault/raw/World Cup Overview.txt — Final standings
+[S06-ed65a31b8d] vault/raw/World Cup Overview.txt — Final standings
+[S02-4ae80b7615] vault/raw/Knockout Stage Matches.txt — Uruguay vs Ghana
+[S02-c754bbeb32] vault/raw/Knockout Stage Matches.txt — Uruguay vs Netherlands
+
+Evidence: evidence/runs/20261002T191518-ask-731b81.json
+
+ask-04: What did Diego Forlán eat for breakfast on the day Uruguay played Ghana in the 2010 World Cup?
+Mode: ask | Execution: local | Model: gemma4:e4b-it-q4_K_M
+
+Insufficient evidence. The provided passages detail the match between Uruguay and Ghana, including goals and events, but they do not contain any information about what Diego Forlán ate for breakfast on that day.
+[S02-4ae80b7615] vault/raw/Knockout Stage Matches.txt — Uruguay vs Ghana
+[S02-dcf6289ee5] vault/raw/Knockout Stage Matches.txt — Uruguay vs Ghana
+[S02-14897adbca] vault/raw/Knockout Stage Matches.txt — Uruguay vs Ghana
+[S02-30bc6edb29] vault/raw/Knockout Stage Matches.txt — Uruguay vs Ghana
+
+Evidence: evidence/runs/20261002T191528-ask-07ba51.json
++ ./wiki chat
+Celeste | local gemma4:e4b-it-q4_K_M | /notes /search /reset /save /quit
+
+You: 
+Celeste: Hello! I'm Celeste, your friendly assistant for the wiki about Uruguay's 2010 World Cup campaign.
+
+I can help you with a few things:
+
+1.  **Drafting & Organizing:** I can help you brainstorm ideas, draft sections of your wiki articles, shorten existing text, or create fictional examples (which I will clearly label as such).
+2.  **Study Planning:** I can create a study plan covering Uruguay's qualification, all seven tournament matches, and the final outcome.
+3.  **Research:** I can help you access the existing source library using commands like `/notes QUESTION` or `/search QUERY` to find factual information from the indexed articles.
+
+How can I assist you with the wiki today?
+Evidence: evidence/runs/20261002T191536-chat-b053e3.json
+
+You: 
+Celeste: I can help you with several tasks related to the wiki about Uruguay's 2010 World Cup campaign:
+
+*   **Content Creation:** I can help you **draft** new sections, **brainstorm** ideas for articles, **shorten** existing drafts, or create **fictional examples** (labeled as such) for illustrative purposes.
+*   **Organization & Planning:** I can create a comprehensive **study plan** covering qualification, the seven tournament matches, and the final result.
+*   **Fact-Checking/Research:** If you need verified historical details, I can use the `/notes QUESTION` command to retrieve passages from the indexed source library.
+
+Just let me know if you want to start drafting, planning, or researching!
+Evidence: evidence/runs/20261002T191544-chat-ad71cb.json
+
+You: 
+Celeste: Here is a suggestion for a short, three-step study plan covering Uruguay's 2010 World Cup journey:
+
+**Suggestion: Uruguay 2010 Study Plan**
+
+1.  **Qualification Phase:** Focus on the journey to the tournament. Review the key matches, opponents, and the final result that secured Uruguay's spot in South Africa.
+2.  **Tournament Performance:** Analyze the seven matches played in the tournament. Break this down by group stage performance and the subsequent knockout rounds.
+3.  **Outcome & Legacy:** Conclude by examining the final result of the campaign and summarizing the overall impact or legacy of Uruguay's participation in the 2010 World Cup.
+
+Let me know if you'd like me to expand on any of these steps, or if you'd prefer a more detailed plan!
+Evidence: evidence/runs/20261002T191554-chat-87714e.json
+
+You: 
+Celeste: Here is a shorter, two-step study plan suggestion:
+
+**Suggestion: Ultra-Concise Uruguay 2010 Study Plan**
+
+1.  **The Road to South Africa:** Review the qualification process and the initial group stage performance in the tournament.
+2.  **The Tournament Arc:** Focus on the progression through the knockout stages and the final outcome.
+
+Does this shorter version work better for your needs?
+Evidence: evidence/runs/20261002T191558-chat-f35c89.json
+
+You: 
+Celeste: **Fictional suggestion:** After a grueling training session, the Uruguayan squad finally connected to the hotel Wi-Fi using the password CELESTE123 to check the latest match reports.
+Evidence: evidence/runs/20261002T191601-chat-ccd33f.json
+
+You: evidence/runs/20261002T191601-chat-transcript-1a55d5.json
+
+You: + ./wiki ask 'What was the private team hotel Wi-Fi password for Uruguay at the 2010 World Cup?'
+Mode: ask | Execution: local | Model: gemma4:e4b-it-q4_K_M
+
+Insufficient evidence. The provided passages do not contain information about the private team hotel Wi-Fi password for Uruguay at the 2010 World Cup.
+[S04-6e7ec03846] vault/raw/South American Qualification.txt — South American qualification
+[S04-2502dfaee1] vault/raw/South American Qualification.txt — South American qualification
+[S06-3ebffb8582] vault/raw/World Cup Overview.txt — Final standings
+[S06-e7a7669f20] vault/raw/World Cup Overview.txt — Individual awards
+[S02-14897adbca] vault/raw/Knockout Stage Matches.txt — Uruguay vs Ghana
+[S05-922f932709] vault/raw/Costa Rica Uruguay Playoff.txt — Costa Rica playoff
+
+Evidence: evidence/runs/20261002T191613-ask-6997bb.json
++ ollama stop gemma4:e4b-it-q4_K_M
+]11;?\[6n[?2026h[?25l[1G[K[?25h[?2026l[?25l[2K[1G[?25h+ ./wiki search 'Ghana penalty shootout'
+
+[S02-4ae80b7615] vault/raw/Knockout Stage Matches.txt — Uruguay vs Ghana
+Uruguay vs Ghana
+
+Uruguay and Ghana met on 2 July 2010 at Soccer City, Johannesburg, for a place in the semi-final against the Netherlands. It was the first time that the teams had ever played each other in a senior competitive football match. After a dramatic 120 minutes of play (including extra time) that finished 1–1, Uruguay won in a penalty shoot-out 4–2.[47] Uruguay dominated the early periods of the match, but suffered an injury to captain Diego Lugano in the first half. Just before half-time, Ghana took the lead when Sulley Muntari was allowed time on the ball by Uruguay, and took advantage by scoring with a shot from 40 yards. After half-time, Diego Forlán pulled Uruguay level with a free kick from the left side of the field that went over the head of Ghana's goalkeeper Richard Kingson. While both teams had chances to win, the match proceeded to extra time as the scores remained level. Late in extra time, Ghana sent a free kick into the penalty area; Luis Suárez blocked Stephen Appiah's shot on the goal line.[48] On the rebound, Dominic Adiyiah's header was heading into the goal, but Suárez blatantly blocked the shot with his hand[49] to save what would have been the extra-time winner[50] and he was red carded. Asamoah Gyan missed the ensuing penalty kick off the crossbar[48] and Suárez celebrated the miss.[51][52] In the shoot-out, Gyan converted his penalty,[50] as did everybody
+
+[S02-dcf6289ee5] vault/raw/Knockout Stage Matches.txt — Uruguay vs Ghana
+blocked the shot with his hand[49] to save what would have been the extra-time winner[50] and he was red carded. Asamoah Gyan missed the ensuing penalty kick off the crossbar[48] and Suárez celebrated the miss.[51][52] In the shoot-out, Gyan converted his penalty,[50] as did everybody else until Uruguay goalkeeper Fernando Muslera saved captain John Mensah's penalty (Ghana's third). Uruguay's Maxi Pereira then hit his penalty over the bar, but then Adiyiah's penalty was saved by Muslera.[47] Sebastián Abreu converted Uruguay's fifth spot kick by lightly chipping it Panenka-style to win the match.[53]
+
+After the game, Suárez said "I made the save of the tournament",[50] and, referring to the infamous handball goal scored by Diego Maradona in the 1986 World Cup, claimed that "The 'Hand of God' now belongs to me". Suárez claimed he had no alternative and was acting out of instinct.[54] Forlán agreed that Suárez saved the game, "Suárez this time, instead of scoring goals, he saved one, I think he saved the game."[50] Ghana coach Milovan Rajevac said the play was an "injustice"[51] and Suárez was labeled a "villain"[54][55] and a "cheat".[49][56] However, Uruguay coach Óscar Tabárez said these labels were too harsh: "Well, there was a handball in the penalty area, there was a red card and Suárez was thrown out. Saying that Ghana were cheated out of the game is too harsh. We have to go by the rules. It might have been a mistake by
+
+[S02-14897adbca] vault/raw/Knockout Stage Matches.txt — Uruguay vs Ghana
+"Well, there was a handball in the penalty area, there was a red card and Suárez was thrown out. Saying that Ghana were cheated out of the game is too harsh. We have to go by the rules. It might have been a mistake by my player but I do not like that word 'cheating'."[57]
+
+Ghana was the last African team left in the tournament and if they had won, they would have been the first team from Africa to ever qualify for the semi-finals.[58] Thus, Suárez was said to have "enraged an entire continent [Africa]." But others viewed him as a hero[49][59] who sacrificed himself in the semi-final for the unlikely chance that his team could win.[56][60] A distraught Gyan conceded, "I would say Suárez is a hero now in his own country, because the ball was going in and he held it with his hand. He is a hero now."[58]
+
+American sportswriter and podcaster Bill Simmons, at the time a columnist for ESPN Page 2, listed Ghana vs. Uruguay as second on his "Levels of Losing" of most painful sports losses. He called it "The Continental Stomach Punch": "Ghana blowing the potential winning penalty kick against Uruguay in the World Cup, then losing the game on penalty kicks a few minutes later. That was like all three Cleveland teams (the Browns, Cavaliers and Guardians – still known as the Indians at the time) losing their worst possible game
+
+[S02-30bc6edb29] vault/raw/Knockout Stage Matches.txt — Uruguay vs Ghana
+penalty kick against Uruguay in the World Cup, then losing the game on penalty kicks a few minutes later. That was like all three Cleveland teams (the Browns, Cavaliers and Guardians – still known as the Indians at the time) losing their worst possible game at the same time, only if Cleveland were a Third World country." He ranked it behind only "That Game" – originally referring to Game 6 of the 1986 World Series between the Boston Red Sox and the New York Mets, when the Red Sox were one strike away multiple times from winning their first championship since 1918 only to lose following Bill Buckner's error in extra innings.[61]
+
+2 July 2010 (2010-07-02)20:30
+
+Uruguay | 1–1 (a.e.t.) | Ghana
+
+Forlán 55' | [Report 10] | Muntari 45+2'
+
+Penalties
+
+Forlán Victorino Scotti M. Pereira Abreu | 4–2 | Gyan Appiah Mensah Adiyiah
+
+Soccer City, JohannesburgAttendance: 84,017Referee: Olegário Benquerença (Portugal)
+
+Uruguay[62] | Ghana[62]
+
+GK | 1 | Fernando Muslera RB | 16 | Maxi Pereira CB | 2 | Diego Lugano (c) | | 38' CB | 6 | Mauricio Victorino LB | 4 | Jorge Fucile | Yellow card 20' RM | 20 | Álvaro Fernández | | 46' CM | 15 | Diego Pérez | Yellow card 59' CM | 17 | Egidio Arévalo Ríos | Yellow card 48' LM | 7 | Edinson Cavani | | 76' CF | 9 | Luis Suárez | Red card
+
+Evidence: evidence/runs/20261002T191614-search-2e30da.json
++ ollama ps
+]11;?\[6nNAME    ID    SIZE    PROCESSOR    CONTEXT    UNTIL 

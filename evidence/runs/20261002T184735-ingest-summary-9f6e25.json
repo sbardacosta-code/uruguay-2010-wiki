@@ -1,0 +1,30 @@
+{
+  "interaction_mode": "ingest-summary",
+  "answer": "{\n  \"index\": {\n    \"sources\": 7,\n    \"sections\": 16,\n    \"passages\": 55\n  },\n  \"generated\": [\n    \"World Cup Group Draw\"\n  ],\n  \"skipped\": [],\n  \"wall_seconds\": 13.974\n}",
+  "result": {
+    "index": {
+      "sources": 7,
+      "sections": 16,
+      "passages": 55
+    },
+    "generated": [
+      "World Cup Group Draw"
+    ],
+    "skipped": [],
+    "wall_seconds": 13.974
+  },
+  "record_id": "20261002T184735-ingest-summary-9f6e25",
+  "created_at": "2026-10-02T18:47:35.069266+00:00",
+  "execution": "local",
+  "network_disconnection": "not verified by this record",
+  "source_catalog_sha256": "fa8da58131de740850a22ae41ce4b2bd40b80e1d081ae6bc5c6182811996eb0a",
+  "configuration": {
+    "model": "gemma4:e4b-it-q4_K_M",
+    "ollama_url": "http://127.0.0.1:11434",
+    "context_tokens": 8192,
+    "answer_tokens": 1200,
+    "retrieval_count": 6,
+    "chunk_words": 240,
+    "overlap_words": 45
+  }
+}

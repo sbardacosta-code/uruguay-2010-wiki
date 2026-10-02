@@ -12,11 +12,11 @@
       "South Africa vs Uruguay",
       "Mexico vs Uruguay"
     ],
-    "status": "Executed locally; reviewed result in evidence/reviewed-results.json; offline run still pending",
+    "status": "Executed in recorded disconnected CLI run 20261002T191406Z; reviewed against sources. Video publication awaiting approval.",
     "expected_source_paths": [
       "vault/raw/Group A Matches.txt"
     ],
-    "actual_evidence_path": "evidence/runs/20260930T070050-ask-fde496.json"
+    "actual_evidence_path": "evidence/runs/20261002T191424-ask-858e53.json"
   },
   {
     "id": "ask-02",
@@ -28,11 +28,11 @@
     "source_sections": [
       "Uruguay vs Ghana"
     ],
-    "status": "Executed locally; reviewed result in evidence/reviewed-results.json; offline run still pending",
+    "status": "Executed in recorded disconnected CLI run 20261002T191406Z; reviewed against sources. Video publication awaiting approval.",
     "expected_source_paths": [
       "vault/raw/Knockout Stage Matches.txt"
     ],
-    "actual_evidence_path": "evidence/runs/20260930T070221-ask-b1ccba.json"
+    "actual_evidence_path": "evidence/runs/20261002T191458-ask-470bc4.json"
   },
   {
     "id": "ask-03",
@@ -47,12 +47,12 @@
       "Match for third place",
       "Final standings"
     ],
-    "status": "Executed locally; reviewed result in evidence/reviewed-results.json; offline run still pending",
+    "status": "Executed in recorded disconnected CLI run 20261002T191406Z; reviewed against sources. Video publication awaiting approval.",
     "expected_source_paths": [
       "vault/raw/Knockout Stage Matches.txt",
       "vault/raw/World Cup Overview.txt"
     ],
-    "actual_evidence_path": "evidence/runs/20260930T070312-ask-8c9775.json"
+    "actual_evidence_path": "evidence/runs/20261002T191518-ask-731b81.json"
   },
   {
     "id": "ask-04",
@@ -60,8 +60,8 @@
     "expected_answer": "The sources do not provide this information. The system should explicitly report insufficient evidence.",
     "source_ids": [],
     "source_sections": [],
-    "status": "Executed locally; reviewed result in evidence/reviewed-results.json; offline run still pending",
+    "status": "Executed in recorded disconnected CLI run 20261002T191406Z; reviewed against sources. Video publication awaiting approval.",
     "expected_source_paths": [],
-    "actual_evidence_path": "evidence/runs/20260930T070334-ask-ce3224.json"
+    "actual_evidence_path": "evidence/runs/20261002T191528-ask-07ba51.json"
   }
 ]

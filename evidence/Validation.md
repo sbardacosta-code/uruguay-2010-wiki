@@ -1,6 +1,6 @@
 # Validation and evidence
 
-These are actual local runs on the user’s Mac, reviewed by the assistant against source passages. They are not proof that internet access was disconnected. The user should review the results before submission.
+This page retains historical connected tests. The [2 October recorded offline run](offline/20261002T191406Z/review.md) is now reviewed separately and supplies disconnected-state observations. Its video is reviewed locally but public upload awaits explicit approval. The README links the latest offline question cards.
 
 ## Final reviewed research checks
 
@@ -42,7 +42,7 @@ All 13 Gemma-generated notes were reviewed against their originals. Unedited gen
 
 ## Remaining work
 
-Run `./scripts/offline_demo.sh` from the project as described in START_HERE after actually disconnecting Wi-Fi/Ethernet. No offline demonstration has been claimed or fabricated. Review the newly regenerated draw note afterward. The repository is published at https://github.com/sbardacosta-code/uruguay-2010-wiki; course-portal submission has not been done.
+The [recorded offline run](offline/20261002T191406Z/review.md) has been reviewed. Public upload of its unedited video awaits explicit approval. The regenerated draw note has been reviewed and its original draft preserved. Course-portal submission remains unconfirmed.
 
 ## Public-copy privacy note
 
@@ -63,10 +63,14 @@ Two failures found during this audit remain visible:
 - [Wrong final rank](runs/20260930T064506-ask-707c1c.md): the model confused playing the third-place fixture with finishing third. The research prompt now requires the final standings row for rank. The [immediate retest](runs/20260930T064809-ask-1d4f19.md) and fresh-clone run both correctly say fourth.
 - [South Korea scorer error](runs/20260930T065402-ask-ec83a5.md): the model gave Suarez's two goals correctly, then wrongly added Forlan as a scorer. The revised prompt tells it to stop after covering the question and distinguish an assist from a goal. This is an observed semantic failure despite valid source quotations, so source review remains necessary.
 
-The additional coach question passed. The [additional test record](additional-tests.json) preserves both original outcomes. The final-prompt retests are recorded below. Offline proof and the user's personal review/submission remain pending.
+The additional coach question passed. The [additional test record](additional-tests.json) preserves both original outcomes. The final-prompt retests are recorded below. This was a connected development check; the later recorded offline run is linked below. The user's personal review/submission remain separate responsibilities.
 
 ### Final prompt retests
 
 The [South Korea retest](runs/20260930T065848-ask-9368a6.md) passes assistant review: Suárez scored in the 8th and 80th minutes. The second claim repeats the winning goal but is supported; the false Forlán scorer claim is absent. Four-case regression results are saved in [the final-prompt regression record](final-prompt-regression.json).
 
 All four final-prompt regression checks pass assistant review. The README cards and `evaluation/questions.json` point to these latest results. The table at the top of this report retains the separately verified fresh-clone run. This finite test set does not guarantee correctness on other questions.
+
+## Recorded offline demonstration — 2 October
+
+The [final run review](offline/20261002T191406Z/review.md) covers fresh ingestion, four passing research tests, chat capabilities and shortening, independent-Ask isolation, and model-free search. It includes before/after network observations, preserved earlier attempts, actual measured traces, and a reviewed generated note. The original 684.245-second recording is held locally pending explicit approval to publish desktop/account-name footage. Historical “pending” statements above describe the earlier development stage and are superseded by this run review.

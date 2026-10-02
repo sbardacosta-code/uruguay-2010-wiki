@@ -17,15 +17,14 @@ This audit distinguishes implemented work, observed tests, and user actions. The
 | 11 | Check retrieval and answer support separately | Actual passages, answers, checked quotations, and assistant source reviews saved. Failures remain visible. Quotation validity alone is not treated as proof of factual correctness |
 | 12 | Test capabilities, follow-up, search, and isolation | Local checks repeated after chat changes. Labeled fiction is now accepted in the observed check; the factual ask still abstains on the fictional password |
 | 13 | Own CLI and saved results | Custom Python CLI/harness, local model client, source index, explicit prompts, errors, and evidence cards. The original eleven harness tests plus seven dashboard integration tests pass. [Fresh-clone check](evidence/clean-clone.json) uses no copied project cache and preserves all 13 reviewed notes |
-| 14 | Disconnected ingestion and all mode checks | **Not done.** [Capture script and instructions](evidence/offline/README.md) ready. Each attempt preserves commands, transcript, before/after network observations, and linked cards |
+| 14 | Disconnected ingestion and all mode checks | **Recorded and reviewed.** [Final run](evidence/offline/20261002T191406Z/review.md) includes all required CLI checks and before/after disconnected-state logs. Video reviewed locally; public upload awaits explicit approval |
 | 15 | README, public repository, and submission | README links the rubric, code, sources, notes, tests, measurements, failures, and remaining offline work. Public access is checked. Course-portal submission is **unconfirmed** |
-| 16 | Optional features | User-selected visual dashboard implemented and locally tested; [guide and evidence](web/README.md). Hosted inference, fine-tuning, and larger models omitted. Dashboard disconnection check remains pending |
+| 16 | Optional features | User-selected visual dashboard implemented and locally tested; [guide and evidence](web/README.md). Hosted inference, fine-tuning, and larger models omitted. Dashboard interactions are visible in the recorded disconnected session; publication of the footage awaits approval |
 
 ## Remaining user actions
 
-1. Read the decisions/walkthrough and inspect the reviewed wiki notes so you can explain the work.
-2. Disconnect internet connections, run the prepared offline demo, and capture actual network/terminal evidence before reconnecting.
-3. Review that run’s outputs with the assistant and publish the real evidence; do not mark it complete based only on a script exit.
-4. Submit or confirm submission of the existing public repository URL through the course portal. Acceptance of post-deadline updates is a course-policy question, not guaranteed by the assignment document.
+1. Approve public publication of the unedited recording, or supply a privacy-edited version that preserves the demonstration. The transcript, reviewed cards, and network observations are published separately.
+2. Read the decisions/walkthrough and inspect the reviewed wiki notes so you can explain the work. The user has demonstrated use of the UI and CLI; personal understanding cannot be inferred solely from the recording.
+3. Submit or confirm submission of the public repository URL through the course portal. Acceptance of post-deadline updates is a course-policy question, not guaranteed by the assignment document.
 
-No new topic, model, or paid-service decision is needed for these fixes. The remaining blocker to claiming a fully completed assignment is actual disconnected-run evidence, not more repository formatting.
+No new topic, model, or paid-service decision is needed. The recorded offline run passes review. Publishing its visual evidence is the remaining repository-delivery step; submission and personal understanding remain user responsibilities.

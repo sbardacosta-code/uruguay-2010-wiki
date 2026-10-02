@@ -1,8 +1,10 @@
 # Offline demonstration
 
-**Status: pending — this page is a procedure, not evidence that a disconnected run occurred.**
+**Recorded run reviewed:** the 2 October 2026 CLI run completed all required checks, with four supported/appropriately abstaining research results. Before-and-after OS observations show Wi-Fi off and no reachable network. The accompanying video has been inspected locally; **public video upload is awaiting explicit approval** because the footage shows desktop and terminal-account details.
 
-The assignment requires CLI ingestion, all four research questions, chat capabilities, a follow-up, original-source search, and chat/ask separation after disconnecting the internet and restarting the CLI. Existing connected local tests are linked from the main README and do not satisfy this requirement by themselves.
+Start with the [complete run review](20261002T191406Z/review.md), [terminal transcript](20261002T191406Z/terminal.txt), [network observations](20261002T191406Z/environment.txt), and [recording metadata](20261002T191406Z/recording.json). Earlier completed and incomplete attempts are retained and labeled in the review.
+
+The instructions below remain available for reproducing the demonstration; “not captured” in the original procedure has been superseded by the linked run.
 
 ## Capture the demonstration
 
@@ -18,11 +20,11 @@ Each attempt gets its own timestamped subfolder, such as `20260930T070000Z/` (ex
 
 | File | Purpose | Current status |
 |---|---|---|
-| `environment.txt` | UTC time, user attestation, OS network observations, exact local model/runtime identity | Not captured |
-| `network-after.txt` | OS network observations after recording | Not captured |
-| `terminal.txt` | Actual offline ingestion, research questions, chat/follow-up, isolation, and model-free search output | Not captured |
-| `wifi-off.png` and result screenshots, or a screen recording | Visible network state and real terminal interaction | Not captured |
-| `review.md` | Links to this run’s individual cards in `../../runs/` from a timestamped run folder, assessment of answers/citations, and any failures | Not written |
+| `environment.txt` | UTC time, user attestation, OS network observations, exact local model/runtime identity | Captured in the reviewed run |
+| `network-after.txt` | OS network observations after recording | Captured in the reviewed run |
+| `terminal.txt` | Actual offline ingestion, research questions, chat/follow-up, isolation, and model-free search output | Captured in the reviewed run |
+| `wifi-off.png` and result screenshots, or a screen recording | Visible network state and real terminal interaction | Recording reviewed locally; publication awaiting approval |
+| `review.md` | Links to this run’s individual cards in `../../runs/` from a timestamped run folder, assessment of answers/citations, and any failures | Written in the reviewed run |
 
 The script creates the network observations and transcript. Individual CLI evidence cards are saved in `evidence/runs/`; the transcript prints their paths. Save visual captures in this folder. For a large recording, use a GitHub release attachment and link it here instead of exceeding GitHub’s file-size limit.
 

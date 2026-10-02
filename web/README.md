@@ -33,4 +33,4 @@ The site uses vanilla JavaScript, local CSS, system fonts, and a repository-auth
 
 See [dashboard validation](../evidence/dashboard/README.md) for actual tests and screenshots. Automated coverage includes HTTP routing, cross-origin rejection, source access boundaries, chat-role validation, history isolation, model-free search, and busy-worker behavior. Browser checks cover navigation and actual local inference.
 
-A disconnected dashboard demonstration is still pending. After installation/downloads, disconnect the internet, open the dashboard, and try Journey, Library, Search, Ask, and Chat. Capture real results alongside the required CLI demonstration. Online local testing is not evidence of disconnection.
+Dashboard interactions have now been reviewed in the [recorded disconnected session](../evidence/offline/20261002T191406Z/review.md); publication of the recording awaits approval. After installation/downloads, disconnect the internet, open the dashboard, and try Journey, Library, Search, Ask, and Chat. Capture real results alongside the required CLI demonstration. Online local testing is not evidence of disconnection.
