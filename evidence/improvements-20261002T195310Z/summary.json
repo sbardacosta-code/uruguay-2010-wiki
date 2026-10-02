@@ -1,0 +1,81 @@
+[
+  {
+    "id": "ask-01",
+    "question": "What were Uruguay’s results in the group stage of the 2010 World Cup, and how many points did they finish with?",
+    "expected": "A 0–0 draw with France, a 3–0 win over South Africa, and a 1–0 win over Mexico. Uruguay finished first in Group A with seven points.",
+    "returncode": 0,
+    "network_disconnection": "not verified",
+    "assessment": "Pending source review",
+    "answer": "Uruguay finished with 7 points in the Group A standings. [S01-2e588f5b5f]\n\nUruguay drew 0–0 against France on June 11, 2010. [S01-54d47d76aa]\n\nUruguay defeated South Africa 3–0 on June 16, 2010. [S01-eca4bd93d3]\n\nUruguay defeated Mexico 1–0 on June 22, 2010. [S01-f6f9b0f76a]",
+    "evidence_path": "evidence/runs/20261002T195356-ask-fa2e91.json"
+  },
+  {
+    "id": "ask-02",
+    "question": "How was Uruguay’s match against Ghana decided, and what did Muslera and Abreu do?",
+    "expected": "The match ended 1–1 after extra time. Uruguay won the shootout 4–2. Muslera saved John Mensah’s and Dominic Adiyiah’s kicks; Abreu converted the decisive kick.",
+    "returncode": 0,
+    "network_disconnection": "not verified",
+    "assessment": "Pending source review",
+    "answer": "Uruguay won the match against Ghana in a penalty shoot-out with a score of 4–2 after the game finished 1–1 after 120 minutes of play. [S02-4ae80b7615] [S02-30bc6edb29]\n\nFernando Muslera saved captain John Mensah's penalty during the shoot-out, and he also saved Adiyiah's penalty. [S02-dcf6289ee5]\n\nSebastián Abreu converted Uruguay's fifth spot kick by lightly chipping it Panenka-style to win the match. [S02-dcf6289ee5]",
+    "evidence_path": "evidence/runs/20261002T195450-ask-0ee56c.json"
+  },
+  {
+    "id": "ask-03",
+    "question": "Who did Uruguay play after the quarter-finals, and where did they finish?",
+    "expected": "Uruguay lost 2–3 to the Netherlands in the semi-final and 2–3 to Germany in the third-place match, finishing fourth.",
+    "returncode": 0,
+    "network_disconnection": "not verified",
+    "assessment": "Pending source review",
+    "answer": "Uruguay played the Netherlands in the first semi-final, which the Netherlands won 3–2. [S02-0e476c8e59] [S02-c754bbeb32]\n\nIn the match for third place, Germany defeated Uruguay 3–2 to claim third place. [S02-ba8c11a4d5]\n\nUruguay finished in fourth place in the final standings. [S06-3ebffb8582]",
+    "evidence_path": "evidence/runs/20261002T195525-ask-b60b21.json"
+  },
+  {
+    "id": "ask-04",
+    "question": "What did Diego Forlán eat for breakfast on the day Uruguay played Ghana in the 2010 World Cup?",
+    "expected": "The sources do not provide this information. The system should explicitly report insufficient evidence.",
+    "returncode": 0,
+    "network_disconnection": "not verified",
+    "assessment": "Pending source review",
+    "answer": "Insufficient evidence. The provided passages detail the match between Uruguay and Ghana, including goals and events, but they do not contain any information about what Diego Forlán ate for breakfast on that day.",
+    "evidence_path": "evidence/runs/20261002T195538-ask-85fe04.json"
+  },
+  {
+    "id": "ghana-paraphrase",
+    "question": "How was Uruguay vs Ghana decided?",
+    "expected": "1–1 after extra time; Uruguay won the penalty shootout 4–2.",
+    "returncode": 1,
+    "network_disconnection": "not verified",
+    "assessment": "Pending source review",
+    "error": "Error: Unable to produce a verified answer: Evidence quote is absent from its cited original passage\nEvidence: evidence/runs/20261002T195622-ask-15043a.json\n"
+  },
+  {
+    "id": "abreu-specific",
+    "question": "What did Abreu do against Ghana?",
+    "expected": "Converted the decisive chipped penalty in the shootout; no unrelated match details.",
+    "returncode": 0,
+    "network_disconnection": "not verified",
+    "assessment": "Pending source review",
+    "answer": "Sebastián Abreu converted Uruguay's fifth spot kick by lightly chipping it Panenka-style to win the match. [S02-dcf6289ee5]",
+    "evidence_path": "evidence/runs/20261002T195640-ask-4074b9.json"
+  },
+  {
+    "id": "abreu-ambiguous",
+    "question": "What did Abreu do in that match?",
+    "expected": "Ask for the match or opponent without calling the model.",
+    "returncode": 0,
+    "network_disconnection": "not verified",
+    "assessment": "Pending source review",
+    "answer": "Please name the match or opponent. Each Ask question is independent; “that match” does not identify a source.",
+    "evidence_path": "evidence/runs/20261002T195640-ask-9229a4.json"
+  },
+  {
+    "id": "korea-scorer",
+    "question": "Who scored Uruguay's goals against South Korea in 2010?",
+    "expected": "Luis Suarez scored both; Forlan must not be credited as a scorer.",
+    "returncode": 0,
+    "network_disconnection": "not verified",
+    "assessment": "Pending source review",
+    "answer": "Luis Suárez scored two goals for Uruguay against South Korea. [S02-8b287aec6f] [S02-0fef899dff]\n\nLuis Suárez's first goal was scored after Diego Forlán made a low cross from the left. [S02-8b287aec6f]\n\nUruguay's second goal was scored by Luis Suárez in the 80th minute with a curling strike from the edge of the 18-yard box. [S02-8b287aec6f]",
+    "evidence_path": "evidence/runs/20261002T195712-ask-b1ddab.json"
+  }
+]

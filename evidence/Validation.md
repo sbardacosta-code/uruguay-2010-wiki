@@ -74,3 +74,7 @@ All four final-prompt regression checks pass assistant review. The README cards 
 ## Recorded offline demonstration — 2 October
 
 The [final run review](offline/20261002T191406Z/review.md) covers fresh ingestion, four passing research tests, chat capabilities and shortening, independent-Ask isolation, and model-free search. It includes before/after network observations, preserved earlier attempts, actual measured traces, and a reviewed generated note. The original 684.245-second recording is published with explicit user approval: [Watch or download the recording](https://github.com/sbardacosta-code/uruguay-2010-wiki/releases/tag/offline-demo-2026-10-02). Historical “pending” statements above describe the earlier development stage and are superseded by this run review.
+
+## Improvements after the recording
+
+The unchanged offline recording and its reviewed outputs remain the baseline evidence. See the [supplemental review](post-recording/README.md) for the later code-readability cleanup, isolated tests, ambiguity handling, and fallible local claim-support review. Supplemental local-model runs do not claim verified internet disconnection. Earlier failures remain preserved.

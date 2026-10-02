@@ -6,6 +6,8 @@ Celeste is an English-language personal wiki about Uruguay’s route to fourth p
 
 [Step-by-step completion status](PROJECT_STATUS.md) tracks every requirement and remaining user action.
 
+**Improvements after the recording:** [Supplemental review and regression evidence](evidence/post-recording/README.md). The original video and offline outputs remain unchanged and demonstrate commit `1a040a5`. Later tests use local Gemma but are not presented as a new disconnected demonstration.
+
 [Decisions and a command-by-command walkthrough](DECISIONS_AND_WALKTHROUGH.md) explain who chose each option and why.
 
 ## Visual dashboard
@@ -121,7 +123,7 @@ Open `vault/` as a vault in Obsidian, then open `index.md`. Model weights are st
 | `ask` | Neutral, independent factual answer | Never included | Original passages, stable source IDs, checked verbatim quotations |
 | `search` | Inspect original text | Never included | Exact passages and paths; no model call |
 
-Chat supports `/notes QUESTION`, `/search QUERY`, `/reset`, `/save`, and `/quit`. Drafts are labeled as suggestions. Saved chat transcripts remain outside the source corpus. Use `/notes` when the simple factual-question routing rule misses your wording. Every standalone `ask` builds a new prompt without chat history. The stage phrase “after the quarter-finals” is expanded to the semi-final and subsequent final/third-place match; both question forms are recorded. Invalid quotations trigger at most one corrective model call, with both attempts saved.
+Chat supports `/notes QUESTION`, `/search QUERY`, `/reset`, `/save`, and `/quit`. Drafts are labeled as suggestions. Saved chat transcripts remain outside the source corpus. Use `/notes` when the simple factual-question routing rule misses your wording. Every standalone `ask` builds a new prompt without chat history. The stage phrase “after the quarter-finals” is expanded to the semi-final and subsequent final/third-place match; both question forms are recorded. Invalid quotations trigger at most one corrective model call, with both attempts saved. Unresolved references such as “that match” request clarification. Supported-looking drafts then receive a separate local claim-support and relevance review; a rejected draft is suppressed, with its actual output and verdict retained. This check is fallible and does not replace human source review.
 
 ## Sources, retrieval, and generated notes
 
@@ -141,11 +143,11 @@ The configured model is `gemma4:e4b-it-q4_K_M`, GGUF Q4_K_M. Download identifier
 
 Each invocation writes a JSON trace and readable card under `evidence/runs/`: original question, selected source passages, prompt, raw response, validation result, model identity, and measured latency/memory. Memory is the sampled sum of Ollama process RSS every 0.3 seconds; it is **not** total macOS unified-memory or GPU use. Timing is actual wall-clock call time, with Ollama’s token/timing counters retained separately. See [validation notes](evidence/Validation.md) for reviewed results and measurements.
 
-Run implementation checks with `python3 -m unittest discover -s tests -v`. Run the model evaluation with `python3 scripts/evaluate.py`. The [four evaluation cases](evaluation/questions.json) were defined before implementation. They cover the group stage, Ghana, the final two matches, and an unsupported breakfast question. Additional checks cover capabilities, a shorter follow-up, chat/ask isolation, idempotent ingestion, and model-free search.
+Run implementation checks with `python3 -m unittest discover -s tests -v`, even before ingestion: tests create isolated temporary indexes and require no downloaded model. They bind localhost for HTTP integration checks. Run the model evaluation with `python3 scripts/evaluate.py`. The [four evaluation cases](evaluation/questions.json) were defined before implementation. They cover the group stage, Ghana, the final two matches, and an unsupported breakfast question. Additional checks cover capabilities, a shorter follow-up, chat/ask isolation, idempotent ingestion, and model-free search.
 
 ## Known limitations and reflection
 
-An exact citation check detects invented quotations and references outside the retrieved evidence. It cannot prove that a claim logically follows from its quotation. All generated answers and notes still require source review. The first E2B tests illustrated this distinction: a valid passage ID could accompany a poorly supported claim, and cell-per-line tables encouraged confusion between group and final standings. Flattening tables and preserving match context improved the evidence supplied to the model; changing models is evaluated with the same questions.
+An exact citation check detects invented quotations and references outside the retrieved evidence. A second local model pass now checks each claim for support and relevance, but neither check proves that a claim logically follows from its source. The same model can repeat its own mistake, and rejecting uncertain drafts can also suppress correct answers. The extra call adds latency, recorded separately and in total workflow timing. All generated answers and notes still require source review. The first E2B tests illustrated this distinction: a valid passage ID could accompany a poorly supported claim, and cell-per-line tables encouraged confusion between group and final standings. Flattening tables and preserving match context improved the evidence supplied to the model; changing models is evaluated with the same questions.
 
 The sources are mainly Wikipedia snapshots plus an English Wikinews draw report. These are useful reference sources, not seven independent accounts or primary eyewitness reports. Full squad and qualifying articles contain other countries’ data; selected source sections reduce irrelevant retrieval. Private personal details are absent and should trigger abstention. This focused wiki is not exhaustive coverage of every minute, interview, or training session. A proposed improvement is a broader, separately evaluated stage parser plus claim-by-claim source-support review: the current stage expansion is domain-specific, and exact quotations alone do not establish factual entailment.
 
@@ -157,6 +159,6 @@ The project repository is public at [sbardacosta-code/uruguay-2010-wiki](https:/
 
 ## Attribution and source refresh
 
-See [Sources and Licenses](research/Sources%20and%20Licenses.md) and [Source Quality Notes](research/Source%20Quality%20Notes.md). Preserve contributor histories and attribution when redistributing. Wikipedia-derived text and adapted wiki notes retain CC BY-SA 4.0 attribution; Wikinews source-specific notices are preserved in the catalog. No photographs, video, or model weights are included.
+See [Sources and Licenses](research/Sources%20and%20Licenses.md) and [Source Quality Notes](research/Source%20Quality%20Notes.md). Preserve contributor histories and attribution when redistributing. Wikipedia-derived text and adapted wiki notes retain CC BY-SA 4.0 attribution; Wikinews source-specific notices are preserved in the catalog. No source photographs or model weights are bundled. The user-approved demonstration video is hosted separately as a GitHub release asset.
 
 The supplied snapshots are enough to run the app. `scripts/collect_sources.py` refreshes the English downloads and extracts text; refreshing changes snapshots and requires internet. `scripts/build_research.py` reproduces research materials and writes its overview under `research/`, preserving this application README. Neither script is part of normal ingestion.

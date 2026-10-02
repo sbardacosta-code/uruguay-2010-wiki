@@ -1,0 +1,27 @@
+{
+  "index": {
+    "sources": 7,
+    "sections": 16,
+    "passages": 55
+  },
+  "generated": [],
+  "skipped": [
+    "Group A Campaign",
+    "Uruguay and France",
+    "Uruguay and South Africa",
+    "Uruguay and Mexico",
+    "Uruguay and South Korea",
+    "Uruguay and Ghana",
+    "Uruguay and Netherlands",
+    "Uruguay and Germany",
+    "Uruguay World Cup Squad",
+    "South American Qualifying",
+    "Costa Rica Playoff",
+    "Diego Forlan at the World Cup",
+    "World Cup Group Draw"
+  ],
+  "wall_seconds": 0.039,
+  "notes_unchanged": true,
+  "network_disconnection": "not verified",
+  "assessment": "All thirteen reviewed notes preserved; source index rebuilt without generation."
+}

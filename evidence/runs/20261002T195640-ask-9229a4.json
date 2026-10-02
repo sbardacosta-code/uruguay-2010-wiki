@@ -1,0 +1,23 @@
+{
+  "interaction_mode": "ask",
+  "question": "What did Abreu do in that match?",
+  "passages": [],
+  "answer": "Please name the match or opponent. Each Ask question is independent; “that match” does not identify a source.",
+  "status": "needs_clarification",
+  "model_called": false,
+  "assessment": "Unresolved reference: ask for context instead of guessing.",
+  "record_id": "20261002T195640-ask-9229a4",
+  "created_at": "2026-10-02T19:56:40.530690+00:00",
+  "execution": "local",
+  "network_disconnection": "not verified by this record",
+  "source_catalog_sha256": "fa8da58131de740850a22ae41ce4b2bd40b80e1d081ae6bc5c6182811996eb0a",
+  "configuration": {
+    "model": "gemma4:e4b-it-q4_K_M",
+    "ollama_url": "http://127.0.0.1:11434",
+    "context_tokens": 8192,
+    "answer_tokens": 1200,
+    "retrieval_count": 6,
+    "chunk_words": 240,
+    "overlap_words": 45
+  }
+}

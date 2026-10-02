@@ -1,0 +1,6 @@
+[
+  {"id":"ghana-paraphrase","question":"How was Uruguay vs Ghana decided?","expected":"1–1 after extra time; Uruguay won the penalty shootout 4–2."},
+  {"id":"abreu-specific","question":"What did Abreu do against Ghana?","expected":"Converted the decisive chipped penalty in the shootout; no unrelated match details."},
+  {"id":"abreu-ambiguous","question":"What did Abreu do in that match?","expected":"Ask for the match or opponent without calling the model."},
+  {"id":"korea-scorer","question":"Who scored Uruguay's goals against South Korea in 2010?","expected":"Luis Suarez scored both; Forlan must not be credited as a scorer."}
+]

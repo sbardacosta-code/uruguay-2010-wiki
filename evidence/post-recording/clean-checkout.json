@@ -1,0 +1,17 @@
+{
+  "date_utc": "2026-10-02T20:11:15.645522+00:00",
+  "method": "Copy all tracked files plus new improvement modules into a fresh temporary directory, with no .local cache; run unittest discovery before ingestion.",
+  "tests": 24,
+  "returncode": 0,
+  "application_cache_created": false,
+  "model_called": false,
+  "network_disconnection": "not verified",
+  "source_code_sha256": {
+    "wiki.py": "31ecf07b5f550dfaa82d7d689c460639b79ba873241aef064be3f98c73cf67d9",
+    "retrieval.py": "0f54853f403845bedd0cbe1c4b50bbd2a3e66fedafa7cc3572e534cd005d3af3",
+    "local_model.py": "af4c3a877615948519c7ff0aacec01638934d5b024ce790153d7ea261b0228e6",
+    "dashboard.py": "0f7ad1ebc8cb18ac5d1e3b9316b942d67e4f6612d070a95949826af3c03392c6",
+    "grounding.py": "88db1bf7b565a23f5dbe51100b9c84619fc2c8788b30040449ff23d1b13773cc",
+    "prompts/verify.txt": "aa50801aa0091eaccd71e365156f5e0145d59f01512c4b54e2704b1873c941b5"
+  }
+}

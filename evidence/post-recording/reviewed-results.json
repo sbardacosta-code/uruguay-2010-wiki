@@ -1,0 +1,66 @@
+[
+  {
+    "id": "ask-01",
+    "question": "What were Uruguay’s results in the group stage of the 2010 World Cup, and how many points did they finish with?",
+    "evidence_path": "evidence/runs/20261002T195356-ask-fa2e91.json",
+    "assessment": "Pass: all three scores and seven points agree with the group table and match sections; the dates also occur in the original passages.",
+    "reviewer": "assistant; checked against retrieved original passages",
+    "network_disconnection": "not verified"
+  },
+  {
+    "id": "ask-02",
+    "question": "How was Uruguay’s match against Ghana decided, and what did Muslera and Abreu do?",
+    "evidence_path": "evidence/runs/20261002T200206-ask-ae0d39.json",
+    "assessment": "Pass: 1–1 after extra time, 4–2 penalties, both Muslera saves, and Abreu’s decisive chip match the Ghana source.",
+    "reviewer": "assistant; checked against retrieved original passages",
+    "network_disconnection": "not verified"
+  },
+  {
+    "id": "ask-03",
+    "question": "Who did Uruguay play after the quarter-finals, and where did they finish?",
+    "evidence_path": "evidence/runs/20261002T195525-ask-b60b21.json",
+    "assessment": "Pass: Netherlands and Germany each won 3–2; the final standings place Uruguay fourth.",
+    "reviewer": "assistant; checked against retrieved original passages",
+    "network_disconnection": "not verified"
+  },
+  {
+    "id": "ask-04",
+    "question": "What did Diego Forlán eat for breakfast on the day Uruguay played Ghana in the 2010 World Cup?",
+    "evidence_path": "evidence/runs/20261002T195538-ask-85fe04.json",
+    "assessment": "Pass: explicit abstention; the source collection provides no breakfast information.",
+    "reviewer": "assistant; checked against retrieved original passages",
+    "network_disconnection": "not verified"
+  },
+  {
+    "id": "ghana-paraphrase",
+    "question": "How was Uruguay vs Ghana decided?",
+    "evidence_path": "evidence/runs/20261002T200124-ask-ed98cc.json",
+    "assessment": "Pass after repair improvement: the answer identifies a 4–2 penalty shootout. The first supplemental attempt failed quotation validation and is retained. The final generic caveat is conservative; it does not invalidate the supported deciding mechanism.",
+    "reviewer": "assistant; checked against retrieved original passages",
+    "network_disconnection": "not verified"
+  },
+  {
+    "id": "abreu-specific",
+    "question": "What did Abreu do against Ghana?",
+    "evidence_path": "evidence/runs/20261002T195640-ask-4074b9.json",
+    "assessment": "Pass: Abreu’s decisive chipped penalty is supported; no unrelated match or merged player names appear.",
+    "reviewer": "assistant; checked against retrieved original passages",
+    "network_disconnection": "not verified"
+  },
+  {
+    "id": "abreu-ambiguous",
+    "question": "What did Abreu do in that match?",
+    "evidence_path": "evidence/runs/20261002T195640-ask-9229a4.json",
+    "assessment": "Pass: requests the match/opponent without retrieval or a model call.",
+    "reviewer": "assistant; checked against retrieved original passages",
+    "network_disconnection": "not verified"
+  },
+  {
+    "id": "korea-scorer",
+    "question": "Who scored Uruguay's goals against South Korea in 2010?",
+    "evidence_path": "evidence/runs/20261002T195712-ask-b1ddab.json",
+    "assessment": "Pass: both goals attributed to Luis Suárez; Forlán is correctly described as supplying a cross, not scoring.",
+    "reviewer": "assistant; checked against retrieved original passages",
+    "network_disconnection": "not verified"
+  }
+]
