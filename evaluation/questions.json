@@ -12,7 +12,7 @@
       "South Africa vs Uruguay",
       "Mexico vs Uruguay"
     ],
-    "status": "Executed in recorded disconnected CLI run 20261002T191406Z; reviewed against sources. Video publication awaiting approval.",
+    "status": "Executed in recorded disconnected CLI run 20261002T191406Z; reviewed against sources. Video published as release offline-demo-2026-10-02.",
     "expected_source_paths": [
       "vault/raw/Group A Matches.txt"
     ],
@@ -28,7 +28,7 @@
     "source_sections": [
       "Uruguay vs Ghana"
     ],
-    "status": "Executed in recorded disconnected CLI run 20261002T191406Z; reviewed against sources. Video publication awaiting approval.",
+    "status": "Executed in recorded disconnected CLI run 20261002T191406Z; reviewed against sources. Video published as release offline-demo-2026-10-02.",
     "expected_source_paths": [
       "vault/raw/Knockout Stage Matches.txt"
     ],
@@ -47,7 +47,7 @@
       "Match for third place",
       "Final standings"
     ],
-    "status": "Executed in recorded disconnected CLI run 20261002T191406Z; reviewed against sources. Video publication awaiting approval.",
+    "status": "Executed in recorded disconnected CLI run 20261002T191406Z; reviewed against sources. Video published as release offline-demo-2026-10-02.",
     "expected_source_paths": [
       "vault/raw/Knockout Stage Matches.txt",
       "vault/raw/World Cup Overview.txt"
@@ -60,7 +60,7 @@
     "expected_answer": "The sources do not provide this information. The system should explicitly report insufficient evidence.",
     "source_ids": [],
     "source_sections": [],
-    "status": "Executed in recorded disconnected CLI run 20261002T191406Z; reviewed against sources. Video publication awaiting approval.",
+    "status": "Executed in recorded disconnected CLI run 20261002T191406Z; reviewed against sources. Video published as release offline-demo-2026-10-02.",
     "expected_source_paths": [],
     "actual_evidence_path": "evidence/runs/20261002T191528-ask-07ba51.json"
   }

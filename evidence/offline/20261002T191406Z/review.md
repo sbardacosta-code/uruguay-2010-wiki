@@ -1,6 +1,6 @@
 # Recorded offline run review
 
-**The run is complete and its four required research answers pass assistant source review.** The recording has been inspected locally; publishing the unedited video is awaiting explicit user approval because it shows desktop and terminal-account details. No public video link is claimed yet.
+**The run is complete and its four required research answers pass assistant source review.** The unedited recording is published with explicit user approval. [Watch or download the recording](https://github.com/sbardacosta-code/uruguay-2010-wiki/releases/tag/offline-demo-2026-10-02). It retains the actual desktop and terminal footage; it has not been edited to replace or hide model outputs.
 
 Run: **2 October 2026, 19:14:06–19:16:14 UTC**. Code at recording: `1a040a5babb3cdf1a2d045e32fbf6dda2ee4fe17`. Model: `gemma4:e4b-it-q4_K_M`, Ollama 0.35.0, digest `dc35e8d9c6061baa6f0fa870975ab6932e2542b579b13ea0f199fa4bb7300c9c`.
 
@@ -9,7 +9,7 @@ Run: **2 October 2026, 19:14:06–19:16:14 UTC**. Code at recording: `1a040a5bab
 - [Before-run environment and model identity](environment.txt): Wi-Fi power off, no IPv4/IPv6 states, reachability “Not Reachable.”
 - [After-run network observations](network-after.txt): the same disconnected state.
 - [Complete terminal transcript](terminal.txt): fresh CLI processes, help, Gemma ingestion, all four research questions, chat checks, independent ask, model unloading, and search.
-- [Recording metadata, SHA-256, and chapter guide](recording.json): original 684.245-second video, no audio track. It shows Wi-Fi switched off near 00:03, dashboard activity, and the CLI run beginning around 08:15. Sampled frames throughout the video and additional frames around network/CLI checkpoints were compared with the full transcript and traces. The recording remains local pending publication approval.
+- [Recording metadata, SHA-256, and chapter guide](recording.json): original 684.245-second video, no audio track. It shows Wi-Fi switched off near 00:03, dashboard activity, and the CLI run beginning around 08:15. Sampled frames throughout the video and additional frames around network/CLI checkpoints were compared with the full transcript and traces. The recording is published as a release attachment: [Watch or download the recording](https://github.com/sbardacosta-code/uruguay-2010-wiki/releases/tag/offline-demo-2026-10-02).
 
 The video and OS observations are consistent with disconnected execution. The local endpoint and model metadata alone would not establish disconnection. Individual evidence cards retain their original “not verified by this record” label; these run-level observations supply the additional context.
 
@@ -46,6 +46,6 @@ These were not silently corrected in saved model outputs. The four final CLI tes
 
 [18:47 run](../20261002T184720Z/terminal.txt) completed before this recording; its network logs and traces are retained. [18:55 attempt](../20261002T185543Z/terminal.txt) ends during the first question and has no after-run network file. It is **incomplete**, with no inferred reason and no success claim.
 
-## Remaining publication step
+## Publication
 
-Approve publication of the original screen recording, or provide a privacy-edited version that preserves the actual demonstration. Then link the public video here and in the main README. Course-portal submission and the student's personal understanding remain separate user responsibilities.
+The original video is published with the user's explicit approval as a GitHub release attachment, keeping the 348,722,421-byte file outside Git history. [Watch or download the recording](https://github.com/sbardacosta-code/uruguay-2010-wiki/releases/tag/offline-demo-2026-10-02) · [Direct video download](https://github.com/sbardacosta-code/uruguay-2010-wiki/releases/download/offline-demo-2026-10-02/Celeste-offline-demo.mov). Its SHA-256 and chapter guide are in [recording.json](recording.json). Course-portal submission and the student's personal understanding remain separate user responsibilities.

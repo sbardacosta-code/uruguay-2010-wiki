@@ -68,6 +68,6 @@ Review the regenerated World Cup Group Draw note against its source. Take screen
 
 Ready: seven source articles, thirteen reviewed topic notes, linked navigation, the local CLI, actual model test evidence, memory/timing measurements, and three Obsidian screenshots. Read `evidence/Validation.md` for successes and observed failures.
 
-The recorded disconnected run has now been reviewed; see [the offline review](evidence/offline/20261002T191406Z/review.md). Remaining: approve the video publication and submit the public repository URL through your course portal. The public repository is https://github.com/sbardacosta-code/uruguay-2010-wiki. Course-portal submission has not been performed.
+The recorded disconnected run has now been reviewed; see [the offline review](evidence/offline/20261002T191406Z/review.md). Remaining: submit or confirm submission of the public repository URL through your course portal. The public repository is https://github.com/sbardacosta-code/uruguay-2010-wiki. Course-portal submission has not been performed.
 
 Read [Decisions and walkthrough](DECISIONS_AND_WALKTHROUGH.md) to understand the choices and trace a question through the code.

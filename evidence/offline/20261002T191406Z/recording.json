@@ -5,7 +5,7 @@
   "duration_seconds": 684.245,
   "audio_tracks": 0,
   "review": "Sampled frames throughout the recording and additional frames around Wi-Fi disconnection and CLI checkpoints; compared against the complete saved transcript and model records.",
-  "publication": "Awaiting explicit approval to publish unedited desktop/account-name footage. Original remains local.",
+  "publication": "Published unedited with explicit user approval, including visible desktop and terminal account name.",
   "cli_run": "20261002T191406Z",
   "approximate_chapters": {
     "00:03": "Wi-Fi switched off",
@@ -22,5 +22,7 @@
     "09:37": "Four tests completed; chat checks follow",
     "10:23": "Search and empty model list complete",
     "11:24": "Recording ends"
-  }
+  },
+  "release_url": "https://github.com/sbardacosta-code/uruguay-2010-wiki/releases/tag/offline-demo-2026-10-02",
+  "download_url": "https://github.com/sbardacosta-code/uruguay-2010-wiki/releases/download/offline-demo-2026-10-02/Celeste-offline-demo.mov"
 }

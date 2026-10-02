@@ -1,6 +1,6 @@
 # Validation and evidence
 
-This page retains historical connected tests. The [2 October recorded offline run](offline/20261002T191406Z/review.md) is now reviewed separately and supplies disconnected-state observations. Its video is reviewed locally but public upload awaits explicit approval. The README links the latest offline question cards.
+This page retains historical connected tests. The [2 October recorded offline run](offline/20261002T191406Z/review.md) is now reviewed separately and supplies disconnected-state observations. Its reviewed video is published: [Watch or download the recording](https://github.com/sbardacosta-code/uruguay-2010-wiki/releases/tag/offline-demo-2026-10-02). The README links the latest offline question cards.
 
 ## Final reviewed research checks
 
@@ -42,7 +42,7 @@ All 13 Gemma-generated notes were reviewed against their originals. Unedited gen
 
 ## Remaining work
 
-The [recorded offline run](offline/20261002T191406Z/review.md) has been reviewed. Public upload of its unedited video awaits explicit approval. The regenerated draw note has been reviewed and its original draft preserved. Course-portal submission remains unconfirmed.
+The [recorded offline run](offline/20261002T191406Z/review.md) has been reviewed. Its unedited video is published with explicit approval: [Watch or download the recording](https://github.com/sbardacosta-code/uruguay-2010-wiki/releases/tag/offline-demo-2026-10-02). The regenerated draw note has been reviewed and its original draft preserved. Course-portal submission remains unconfirmed.
 
 ## Public-copy privacy note
 
@@ -73,4 +73,4 @@ All four final-prompt regression checks pass assistant review. The README cards 
 
 ## Recorded offline demonstration — 2 October
 
-The [final run review](offline/20261002T191406Z/review.md) covers fresh ingestion, four passing research tests, chat capabilities and shortening, independent-Ask isolation, and model-free search. It includes before/after network observations, preserved earlier attempts, actual measured traces, and a reviewed generated note. The original 684.245-second recording is held locally pending explicit approval to publish desktop/account-name footage. Historical “pending” statements above describe the earlier development stage and are superseded by this run review.
+The [final run review](offline/20261002T191406Z/review.md) covers fresh ingestion, four passing research tests, chat capabilities and shortening, independent-Ask isolation, and model-free search. It includes before/after network observations, preserved earlier attempts, actual measured traces, and a reviewed generated note. The original 684.245-second recording is published with explicit user approval: [Watch or download the recording](https://github.com/sbardacosta-code/uruguay-2010-wiki/releases/tag/offline-demo-2026-10-02). Historical “pending” statements above describe the earlier development stage and are superseded by this run review.

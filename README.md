@@ -2,7 +2,7 @@
 
 Celeste is an English-language personal wiki about Uruguay’s route to fourth place at the 2010 World Cup. It uses local Gemma through Ollama, a small Python CLI, original-source retrieval, and linked Markdown notes in Obsidian. Read [START_HERE.md](START_HERE.md) for a guided walkthrough.
 
-**Submission status:** Local CLI, sources, reviewed notes, dashboard, tests, and Obsidian screenshots are published. The [recorded offline run](evidence/offline/20261002T191406Z/review.md) passed review; its transcript and network observations are included. The unedited video awaits explicit approval for public upload. Course-portal submission remains unconfirmed.
+**Submission status:** Local CLI, sources, reviewed notes, dashboard, tests, and Obsidian screenshots are published. The [recorded offline run](evidence/offline/20261002T191406Z/review.md) passed review; its transcript and network observations are included. The unedited video is published: [Watch or download the recording](https://github.com/sbardacosta-code/uruguay-2010-wiki/releases/tag/offline-demo-2026-10-02). Course-portal submission remains unconfirmed.
 
 [Step-by-step completion status](PROJECT_STATUS.md) tracks every requirement and remaining user action.
 
@@ -31,8 +31,8 @@ This table maps the assignment’s three grading categories to the submitted art
 | Rubric category | What to inspect | Current status |
 |---|---|---|
 | Deliverable quality — 4 points | [CLI and harness](wiki.py), [retrieval](retrieval.py), [local model client](local_model.py), [separate prompts](prompts/), [wiki index](vault/index.md), [topic folders](vault/wiki/), [sources and attribution](research/Sources%20and%20Licenses.md), setup below | Implemented; 13 notes reviewed against sources; screenshots below |
-| Testing and evaluation — 3 points | Four evidence cards below, [predefined expectations](evaluation/questions.json), [chat checks](evidence/runs/20261002T191601-chat-transcript-1a55d5.json), [search output](evidence/runs/20261002T191614-search-2e30da.json), [chat/ask separation](evidence/runs/20261002T191613-ask-6997bb.json), [failures and fixes](evidence/Validation.md) | Four recorded offline CLI tests reviewed; video publication pending approval |
-| Working result — 3 points | [Actual Gemma ingestion](evidence/runs/20261002T191413-ingest-summary-fbf157.md), [unchanged re-ingestion](evidence/idempotent-ingestion.json), [runtime identity](evidence/model-identity.json), [offline demonstration page](evidence/offline/README.md) | Disconnected CLI run reviewed; public video attachment pending approval |
+| Testing and evaluation — 3 points | Four evidence cards below, [predefined expectations](evaluation/questions.json), [chat checks](evidence/runs/20261002T191601-chat-transcript-1a55d5.json), [search output](evidence/runs/20261002T191614-search-2e30da.json), [chat/ask separation](evidence/runs/20261002T191613-ask-6997bb.json), [failures and fixes](evidence/Validation.md) | Four recorded offline CLI tests reviewed; video published |
+| Working result — 3 points | [Actual Gemma ingestion](evidence/runs/20261002T191413-ingest-summary-fbf157.md), [unchanged re-ingestion](evidence/idempotent-ingestion.json), [runtime identity](evidence/model-identity.json), [offline demonstration page](evidence/offline/README.md) | Disconnected CLI run reviewed; video published |
 
 ### Four research questions: actual answers and source review
 
@@ -85,7 +85,7 @@ The screenshots show the actual vault, not mockups. Graph filter: `path:wiki/`; 
 
 ### Offline demonstration — recorded and reviewed
 
-The [2 October run review](evidence/offline/20261002T191406Z/review.md) links actual ingestion, all four Ask results, Chat/follow-up/isolation checks, and Search with the model unloaded. Its [terminal transcript](evidence/offline/20261002T191406Z/terminal.txt) and [before](evidence/offline/20261002T191406Z/environment.txt)/[after](evidence/offline/20261002T191406Z/network-after.txt) observations show the disconnected state. The original 11-minute-24-second recording has been reviewed locally. **Public video publication awaits explicit approval** because the screen capture includes desktop and terminal-account details.
+The [2 October run review](evidence/offline/20261002T191406Z/review.md) links actual ingestion, all four Ask results, Chat/follow-up/isolation checks, and Search with the model unloaded. Its [terminal transcript](evidence/offline/20261002T191406Z/terminal.txt) and [before](evidence/offline/20261002T191406Z/environment.txt)/[after](evidence/offline/20261002T191406Z/network-after.txt) observations show the disconnected state. The original 11-minute-24-second recording is published with explicit user approval. **[Watch or download the recording](https://github.com/sbardacosta-code/uruguay-2010-wiki/releases/tag/offline-demo-2026-10-02)**. CLI ingestion and the required tests begin around **08:15**.
 
 ## Setup
 
